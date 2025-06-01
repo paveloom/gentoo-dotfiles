@@ -1,0 +1,56 @@
+gui:
+  enlargedSideViewLocation: top
+  filterMode: fuzzy
+  nerdFontsVersion: "3"
+  scrollHeight: 3
+  scrollPastBottom: false
+  theme:
+    selectedLineBgColor:
+      - "#e0e0e0"
+  showBottomLine: false
+  showCommandLog: false
+git:
+  autoForwardBranches: none
+  merging:
+    args: --no-ff
+  parseEmoji: true
+quitOnTopLevelReturn: true
+notARepository: skip
+promptToReturnFromSubprocess: false
+keybinding:
+  stash:
+    popStash: p
+  files:
+    toggleTreeView: t
+    viewResetOptions: R
+customCommands:
+  - key: c
+    description: commit changes
+    context: files
+    command: git commit -v
+    subprocess: true
+  - key: D
+    description: Commit all staged files and push right after
+    context: global
+    loadingText: Pushing...
+    command: git commit -v && git push -u {{.SelectedRemote.Name}} {{.SelectedLocalBranch.Name}}
+    subprocess: true
+  - key: E
+    description: Add an empty commit
+    context: commits
+    loadingText: Committing empty commit...
+    command: git commit --allow-empty
+    subprocess: true
+  - key: P
+    description: push
+    context: global
+    loadingText: Pushing...
+    command: git {{index .PromptResponses 0}}
+    subprocess: true
+    prompts:
+      - type: menu
+        title: How to push?
+        options:
+          - value: push
+          - value: push --force-with-lease
+          - value: push --force
