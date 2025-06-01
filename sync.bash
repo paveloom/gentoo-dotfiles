@@ -53,11 +53,9 @@ symlink_dirs() {
 main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
 
-    for home_dir in "$ROOT/home"/*; do
-        symlink_dirs "$home_dir/.config"
-    done
-
     symlink_dirs "$ROOT/etc"
+
+    symlink_dirs "$ROOT/home/paveloom/.config"
 }
 
 main
