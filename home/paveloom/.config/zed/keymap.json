@@ -1,0 +1,74 @@
+[
+  {
+    "context": "Editor",
+    "bindings": {
+      "alt-z": "editor::ToggleSoftWrap"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal)",
+    "bindings": {
+      "space a": "pane::GoBack",
+      "space d": "pane::GoForward",
+      "space e": "outline_panel::ToggleFocus",
+      "space g": "git_panel::ToggleFocus",
+      "space w": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == insert)",
+    "bindings": {
+      "ctrl-v": "editor::Paste"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == visual)",
+    "bindings": {
+      "ctrl-left": ["workspace::SendKeystrokes", "5 h"],
+      "ctrl-right": ["workspace::SendKeystrokes", "5 l"],
+      "ctrl-up": ["workspace::SendKeystrokes", "5 g k"],
+      "ctrl-down": ["workspace::SendKeystrokes", "5 g j"],
+      "x": ["workspace::SendKeystrokes", "\" + x"]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == insert)",
+    "bindings": {
+      "ctrl-up": ["editor::MoveUpByLines", { "lines": 5 }],
+      "ctrl-down": ["editor::MoveDownByLines", { "lines": 5 }]
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "tab": "editor::Indent",
+      "shift-tab": "editor::Outdent"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual)",
+    "bindings": {
+      "left": "vim::WrappingLeft",
+      "right": "vim::WrappingRight"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-tab": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "escape": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      "ctrl-w": ["pane::CloseActiveItem", { "save_intent": "save_all" }]
+    }
+  }
+]
