@@ -56,6 +56,9 @@ main() {
     symlink_dirs "$ROOT/etc"
 
     symlink_dirs "$ROOT/home/paveloom/.config"
+    symlink_file "$ROOT/home/paveloom/.bash_logout"
+    symlink_file "$ROOT/home/paveloom/.bash_profile"
+    symlink_file "$ROOT/home/paveloom/.bashrc"
 }
 
 main
