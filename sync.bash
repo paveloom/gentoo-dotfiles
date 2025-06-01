@@ -3,7 +3,7 @@
 PREFIX="/"
 ROOT="$(realpath -e $0 | xargs dirname)"
 
-symlink() {
+symlink_file() {
     local input_file="$1"
     local output_file="$2"
 
@@ -30,36 +30,35 @@ symlink() {
         fi
     fi
 
-    ln -fs -T "$input_file" "$output_file"
+    local target_user
+    target_user="$(dirname $output_file | xargs stat -c "%U")"
+
+    if [[ "$target_user" == "root" ]]; then
+        sudo ln -fs -T "$input_file" "$output_file"
+    else
+        ln -fs -T "$input_file" "$output_file"
+    fi
 }
 
-process_home_config_file() {
-    local input_file="$1"
+symlink_dirs() {
+    local top_dir="$1"
 
-    local output_file
-    output_file="$PREFIX$(realpath --relative-to $ROOT $input_file)"
+    while read -r input_dir; do
+        local output_dir
+        output_dir="$PREFIX$(realpath --relative-to $ROOT $input_dir)"
 
-    symlink "$input_file" "$output_file"
+        symlink_file "$input_dir" "$output_dir"
+    done < <(find "$top_dir" -mindepth 1 -maxdepth 1 -type d)
 }
 
-process_home_config() {
-    local home_config="$1"
+main() {
+    echo "The script will call \`sudo\` whenever root access is necessary."
 
-    while read -r input_file; do
-        process_home_config_file "$input_file"
-    done < <(find $home_config -mindepth 1 -maxdepth 1 -type d)
-}
-
-process_home() {
-    local home="$1"
-
-    process_home_config "$home/.config"
-}
-
-process() {
-    for home in "$ROOT/home"/*; do
-        process_home "$home"
+    for home_dir in "$ROOT/home"/*; do
+        symlink_dirs "$home_dir/.config"
     done
+
+    symlink_dirs "$ROOT/etc"
 }
 
-process
+main
