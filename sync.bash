@@ -40,7 +40,7 @@ process_home_config() {
 
     while read -r input_file; do
         process_home_config_file "$input_file"
-    done < <(find $home_config -mindepth 1 -type d)
+    done < <(find $home_config -mindepth 1 -maxdepth 1 -type d)
 }
 
 process_home() {
