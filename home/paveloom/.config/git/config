@@ -1,0 +1,28 @@
+[commit]
+    gpgSign = true
+[core]
+    editor = vim +startinsert
+[gpg "ssh"]
+    allowedSignersFile = ~/.config/git/allowed_signers
+[init]
+    defaultBranch = main
+[pull]
+    ff = only
+    rebase = merges
+[push]
+    gpgSign = if-asked
+    autoSetupRemote = true
+    default = upstream
+    recurseSubmodules = on-demand
+[rebase]
+    updateRefs = true
+[status]
+    submodulesummary = true
+[submodule]
+    recurse = true
+[tag]
+    gpgSign = true
+[user]
+    name = Pavel Sobolev
+    email = contact@paveloom.dev
+    signingkey = 56FB9A3D5A7DDD45
