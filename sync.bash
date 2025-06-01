@@ -3,11 +3,9 @@
 PREFIX="/"
 ROOT="$(realpath -e $0 | xargs dirname)"
 
-process_home_config_file() {
+symlink() {
     local input_file="$1"
-
-    local output_file
-    output_file="$PREFIX$(realpath --relative-to $ROOT $input_file)"
+    local output_file="$2"
 
     if [[ -e $output_file ]]; then
         if [[ -L $output_file ]]; then
@@ -33,6 +31,15 @@ process_home_config_file() {
     fi
 
     ln -fs -T "$input_file" "$output_file"
+}
+
+process_home_config_file() {
+    local input_file="$1"
+
+    local output_file
+    output_file="$PREFIX$(realpath --relative-to $ROOT $input_file)"
+
+    symlink "$input_file" "$output_file"
 }
 
 process_home_config() {
