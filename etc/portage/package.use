@@ -1,0 +1,84 @@
+sys-apps/systemd boot
+sys-kernel/installkernel dracut systemd-boot
+
+# required by app-portage/pfl-3.5.3::gentoo[network-cron]
+# required by pfl (argument)
+>=sys-apps/util-linux-2.40.4 caps
+
+# required by app-admin/keepassxc-2.7.10::gentoo
+# required by keepassxc (argument)
+>=sys-libs/zlib-1.3.1-r1 minizip
+
+# Quod Libet
+media-plugins/gst-plugins-meta opus modplug
+
+# audio
+media-video/pipewire sound-server
+media-sound/pulseaudio -daemon
+
+# KeePassXC
+app-admin/keepassxc browser
+
+# Vivaldi
+media-video/ffmpeg-chromium vaapi
+www-client/vivaldi proprietary-codecs widevine
+
+# Mesa
+media-libs/mesa vaapi
+
+# FFMPEG
+media-video/ffmpeg opus vaapi vpx
+
+# Evolution
+mail-client/evolution archive -weather
+
+# Fonts
+media-fonts/corefonts tahoma
+media-fonts/fonts-meta cjk ms
+media-fonts/noto cjk
+
+# RetroArch
+games-emulation/RetroArch -pulseaudio pipewire network
+
+# required by media-sound/picard-2.13.3::gentoo[python_single_target_python3_12]
+# required by picard (argument)
+>=dev-python/pyqt5-5.15.11 declarative
+
+# Audacious
+media-plugins/audacious-plugins opus pipewire -pulseaudio 
+
+# required by app-containers/incus-6.11::gentoo
+# required by incus (argument)
+>=dev-libs/raft-0.22.1 lz4
+# required by app-containers/incus-6.11::gentoo
+# required by incus (argument)
+>=dev-util/xdelta-3.0.11-r1 lzma
+# required by app-containers/incus-6.11::gentoo
+# required by incus (argument)
+>=sys-fs/squashfs-tools-4.6.1 lzma
+# required by app-containers/lxc-6.0.4::gentoo[caps,tools]
+# required by app-containers/incus-6.11::gentoo
+# required by incus (argument)
+>=sys-libs/libcap-2.71 static-libs
+
+# required by app-containers/containers-common-0.63.0::gentoo
+# required by app-containers/skopeo-1.18.0-r1::gentoo
+# required by skopeo (argument)
+>=net-firewall/iptables-1.8.11-r1 nftables
+
+# required by net-news/newsflash-3.3.5::guru
+# required by newsflash (argument)
+>=media-video/clapper-0.8.0 mpris
+
+x11-libs/libdrm video_cards_radeon
+
+gnome-base/gnome-keyring -ssh-agent
+app-admin/keepassxc -keyring -ssh-agent
+
+net-p2p/qbittorrent -dbus -gui webui
+
+# required by dev-util/bash-language-server-5.4.3::guru
+# required by bash-language-server (argument)
+net-libs/nodejs npm
+
+app-admin/sudo -sendmail
