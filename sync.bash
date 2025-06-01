@@ -5,7 +5,9 @@ ROOT="$(realpath -e $0 | xargs dirname)"
 
 symlink_file() {
     local input_file="$1"
-    local output_file="$2"
+
+    local output_file
+    output_file="$PREFIX$(realpath --relative-to $ROOT $input_file)"
 
     if [[ -e $output_file ]]; then
         if [[ -L $output_file ]]; then
@@ -44,10 +46,7 @@ symlink_dirs() {
     local top_dir="$1"
 
     while read -r input_dir; do
-        local output_dir
-        output_dir="$PREFIX$(realpath --relative-to $ROOT $input_dir)"
-
-        symlink_file "$input_dir" "$output_dir"
+        symlink_file "$input_dir"
     done < <(find "$top_dir" -mindepth 1 -maxdepth 1 -type d)
 }
 
