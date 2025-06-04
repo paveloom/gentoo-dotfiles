@@ -1,0 +1,6 @@
+" Enable mouse support
+set mouse=a
+
+" Enable undo persistence
+set undodir=~/.vim/undodir
+set undofile
