@@ -1,1 +1,0 @@
->=sys-libs/liburing-2.10
