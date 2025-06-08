@@ -38,7 +38,7 @@ media-fonts/fonts-meta cjk ms
 media-fonts/noto cjk
 
 # RetroArch
-games-emulation/RetroArch -pulseaudio pipewire network
+games-emulation/RetroArch network pipewire
 
 # required by media-sound/picard-2.13.3::gentoo[python_single_target_python3_12]
 # required by picard (argument)
