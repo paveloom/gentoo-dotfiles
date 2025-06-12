@@ -12,7 +12,7 @@ symlink_file() {
     if sudo test -e $output_file; then
         if sudo test -L $output_file; then
             local target
-            target="$(sudo readlink -f $output_file)"
+            target="$(sudo readlink $output_file)"
 
             if [[ "$target" == "$input_file" ]]; then
                 return
