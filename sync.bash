@@ -32,7 +32,7 @@ symlink_file() {
         fi
     fi
 
-    if [[ ! -w "$output_file" ]]; then
+    if [[ ! -w "$(dirname $output_file)" ]]; then
         sudo ln -fs -T "$input_file" "$output_file"
     else
         ln -fs -T "$input_file" "$output_file"
