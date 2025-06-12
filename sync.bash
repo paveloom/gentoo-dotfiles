@@ -47,7 +47,7 @@ symlink_by_type() {
 
     while read -r input_file; do
         symlink_file "$input_file"
-    done < <(find "$top_dir" -mindepth 1 -maxdepth 1 -type "$type")
+    done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type")
 }
 
 symlink_directories() {
