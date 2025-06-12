@@ -32,10 +32,7 @@ symlink_file() {
         fi
     fi
 
-    local target_user
-    target_user="$(dirname $output_file | xargs stat -c "%U")"
-
-    if [[ "$target_user" == "root" ]]; then
+    if [[ ! -w "$output_file" ]]; then
         sudo ln -fs -T "$input_file" "$output_file"
     else
         ln -fs -T "$input_file" "$output_file"
