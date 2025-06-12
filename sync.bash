@@ -9,8 +9,6 @@ symlink_file() {
     local output_file
     output_file="$PREFIX$(realpath -s --relative-to $ROOT $input_file)"
 
-    echo "$output_file -> $input_file"
-
     if [[ -e $output_file ]]; then
         if [[ -L $output_file ]]; then
             local target
@@ -42,6 +40,8 @@ symlink_file() {
     else
         ln -fs -T "$input_file" "$output_file"
     fi
+
+    echo "$output_file -> $input_file"
 }
 
 symlink_dirs() {
