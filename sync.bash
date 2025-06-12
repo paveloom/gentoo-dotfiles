@@ -7,7 +7,7 @@ symlink_file() {
     local input_file="$1"
 
     local output_file
-    output_file="$PREFIX$(realpath --relative-to $ROOT $input_file)"
+    output_file="$PREFIX$(realpath -s --relative-to $ROOT $input_file)"
 
     echo "$output_file -> $input_file"
 
