@@ -53,6 +53,7 @@ main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
 
     symlink_dirs "$ROOT/etc"
+    symlink_file "$ROOT/root/.config/zed"
 
     symlink_dirs "$ROOT/home/paveloom/.config"
     symlink_file "$ROOT/home/paveloom/.bash_logout"
