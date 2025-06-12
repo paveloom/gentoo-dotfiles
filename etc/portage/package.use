@@ -82,3 +82,7 @@ net-p2p/qbittorrent -dbus -gui webui
 net-libs/nodejs npm
 
 app-admin/sudo -sendmail
+
+# required by www-servers/nginx-1.27.5::gentoo
+# required by nginx (argument)
+>=app-misc/mime-types-2.1.54 nginx
