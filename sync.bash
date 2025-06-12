@@ -41,24 +41,33 @@ symlink_file() {
     echo "$output_file -> $input_file"
 }
 
-symlink_dirs() {
+symlink_by_type() {
     local top_dir="$1"
+    local type="$2"
 
-    while read -r input_dir; do
-        symlink_file "$input_dir"
-    done < <(find "$top_dir" -mindepth 1 -maxdepth 1 -type d)
+    while read -r input_file; do
+        symlink_file "$input_file"
+    done < <(find "$top_dir" -mindepth 1 -maxdepth 1 -type "$type")
+}
+
+symlink_directories() {
+    local top_dir="$1"
+    symlink_by_type "$top_dir" "d"
+}
+
+symlink_regular_files() {
+    local top_dir="$1"
+    symlink_by_type "$top_dir" "f"
 }
 
 main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
 
-    symlink_dirs "$ROOT/etc"
-    symlink_file "$ROOT/root/.config/zed"
+    symlink_directories "$ROOT/etc"
+    symlink_directories "$ROOT/root/.config"
 
-    symlink_dirs "$ROOT/home/paveloom/.config"
-    symlink_file "$ROOT/home/paveloom/.bash_logout"
-    symlink_file "$ROOT/home/paveloom/.bash_profile"
-    symlink_file "$ROOT/home/paveloom/.bashrc"
+    symlink_regular_files "$ROOT/home/paveloom"
+    symlink_directories "$ROOT/home/paveloom/.config"
 }
 
 main
