@@ -9,10 +9,10 @@ symlink_file() {
     local output_file
     output_file="$PREFIX$(realpath -s --relative-to $ROOT $input_file)"
 
-    if [[ -e $output_file ]]; then
-        if [[ -L $output_file ]]; then
+    if sudo test -e $output_file; then
+        if sudo test -L $output_file; then
             local target
-            target="$(readlink -f $output_file)"
+            target="$(sudo readlink -f $output_file)"
 
             if [[ "$target" == "$input_file" ]]; then
                 return
