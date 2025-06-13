@@ -86,3 +86,5 @@ app-admin/sudo -sendmail
 # required by www-servers/nginx-1.27.5::gentoo
 # required by nginx (argument)
 >=app-misc/mime-types-2.1.54 nginx
+
+www-servers/nginx NGINX_MODULES_HTTP: gunzip gzip_static
