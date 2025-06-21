@@ -10,9 +10,7 @@
     "bindings": {
       "space a": "pane::GoBack",
       "space d": "pane::GoForward",
-      "space e": "outline_panel::ToggleFocus",
-      "space g": "git_panel::ToggleFocus",
-      "space w": "project_panel::ToggleFocus"
+      "ctrl-shift-t": "terminal_panel::ToggleFocus"
     }
   },
   {
@@ -60,9 +58,27 @@
     }
   },
   {
+    "context": "GitPanel",
+    "bindings": {
+      "ctrl-shift-g": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "OutlinePanel",
+    "bindings": {
+      "ctrl-shift-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
     "context": "ProjectPanel",
     "bindings": {
-      "escape": "workspace::ToggleLeftDock"
+      "ctrl-shift-e": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "ctrl-shift-t": "workspace::ToggleBottomDock"
     }
   },
   {
