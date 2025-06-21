@@ -16,6 +16,7 @@ git:
   merging:
     args: --no-ff
   parseEmoji: true
+  overrideGpg: true
 quitOnTopLevelReturn: true
 notARepository: skip
 promptToReturnFromSubprocess: false
