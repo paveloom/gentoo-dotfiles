@@ -1,6 +1,7 @@
 gui:
   enlargedSideViewLocation: top
   filterMode: fuzzy
+  mainPanelSplitMode: vertical
   nerdFontsVersion: "3"
   scrollHeight: 3
   scrollPastBottom: false
