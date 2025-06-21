@@ -78,6 +78,9 @@
   {
     "context": "Terminal",
     "bindings": {
+      "ctrl-n": null,
+      "ctrl-p": null,
+      "ctrl-s": null,
       "ctrl-shift-t": "workspace::ToggleBottomDock"
     }
   }
