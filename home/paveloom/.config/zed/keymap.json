@@ -80,11 +80,5 @@
     "bindings": {
       "ctrl-shift-t": "workspace::ToggleBottomDock"
     }
-  },
-  {
-    "context": "VimControl && !menu",
-    "bindings": {
-      "ctrl-w": ["pane::CloseActiveItem", { "save_intent": "save_all" }]
-    }
   }
 ]
