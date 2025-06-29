@@ -92,3 +92,5 @@ www-servers/nginx NGINX_MODULES_HTTP: gunzip gzip_static
 app-text/hunspell L10N: en ru
 
 media-gfx/fontforge woff2
+
+media-libs/freetype harfbuzz
