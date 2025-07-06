@@ -2,4 +2,4 @@
 
 export HISTCONTROL=erasedups
 export HISTFILESIZE=10000
-export HISTSIZE=1000
+export HISTSIZE=10000
