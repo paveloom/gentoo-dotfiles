@@ -94,3 +94,5 @@ app-text/hunspell L10N: en ru
 media-gfx/fontforge woff2
 
 media-libs/freetype harfbuzz
+
+net-vpn/frp -server
