@@ -96,3 +96,5 @@ media-gfx/fontforge woff2
 media-libs/freetype harfbuzz
 
 net-vpn/frp -server
+
+media-video/obs-studio pipewire
