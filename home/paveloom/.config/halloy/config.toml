@@ -1,0 +1,21 @@
+theme = "light"
+
+[actions.buffer]
+click_channel_name = "replace-pane"
+click_username = "replace-pane"
+message_channel = "replace-pane"
+message_user = "replace-pane"
+
+[actions.sidebar]
+buffer = "replace-pane"
+
+[font]
+family = "JetBrainsMonoNL Nerd Font"
+size = 16
+
+[servers.libera]
+nickname = "paveloom/libera"
+server = "znc.paveloom.dev"
+password_file = "/home/paveloom/.config/halloy/password"
+dangerously_accept_invalid_certs = true
+use_tls = true
