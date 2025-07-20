@@ -7,3 +7,8 @@ set undofile
 
 " Allow the Left/Right keys to move the cursor to the previous/next line
 set whichwrap+=<,>
+
+" Set the alternative keymap
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
