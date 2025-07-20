@@ -12,3 +12,6 @@ set whichwrap+=<,>
 set keymap=russian-jcukenwin
 set iminsert=0
 set imsearch=0
+
+" Wrap long lines at a character in 'breakat'
+set linebreak
