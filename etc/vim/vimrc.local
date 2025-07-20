@@ -4,3 +4,6 @@ set mouse=a
 " Enable undo persistence
 set undodir=~/.vim/undodir
 set undofile
+
+" Allow the Left/Right keys to move the cursor to the previous/next line
+set whichwrap+=<,>
