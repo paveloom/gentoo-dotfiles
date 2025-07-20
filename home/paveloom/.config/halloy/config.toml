@@ -13,6 +13,16 @@ buffer = "replace-pane"
 family = "JetBrainsMonoNL Nerd Font"
 size = 16
 
+[notifications]
+connected = { sound = "peck", show_toast = true }
+direct_message = { sound = "peck", show_toast = true }
+disconnected = { sound = "peck", show_toast = true }
+file_transfer_request = { sound = "peck", show_toast = true }
+highlight = { sound = "peck", show_toast = true }
+monitored_offline = { sound = "peck", show_toast = true }
+monitored_online = { sound = "peck", show_toast = true }
+reconnected = { sound = "peck", show_toast = true }
+
 [servers.libera]
 nickname = "paveloom/libera"
 server = "znc.paveloom.dev"
