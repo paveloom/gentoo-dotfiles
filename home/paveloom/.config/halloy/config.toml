@@ -29,3 +29,6 @@ server = "znc.paveloom.dev"
 password_file = "/home/paveloom/.config/halloy/password"
 dangerously_accept_invalid_certs = true
 use_tls = true
+
+[sidebar]
+position = "top"
