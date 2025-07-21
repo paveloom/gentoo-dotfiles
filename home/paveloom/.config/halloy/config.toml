@@ -23,6 +23,9 @@ monitored_offline = { sound = "peck", show_toast = true }
 monitored_online = { sound = "peck", show_toast = true }
 reconnected = { sound = "peck", show_toast = true }
 
+[preview]
+enabled = false
+
 [servers.libera]
 nickname = "paveloom/libera"
 server = "znc.paveloom.dev"
