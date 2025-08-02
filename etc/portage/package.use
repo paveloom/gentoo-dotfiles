@@ -102,3 +102,5 @@ media-video/obs-studio pipewire
 media-libs/libheif examples x265
 
 media-gfx/imagemagick heif
+
+games-emulation/eden cubeb lto
