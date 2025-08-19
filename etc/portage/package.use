@@ -104,3 +104,5 @@ media-libs/libheif examples x265
 media-gfx/imagemagick heif
 
 games-emulation/eden cubeb lto
+
+sci-libs/onnxruntime python
