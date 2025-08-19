@@ -13,7 +13,7 @@ sys-kernel/installkernel dracut systemd-boot
 media-plugins/gst-plugins-meta opus modplug
 
 # audio
-media-video/pipewire sound-server
+media-video/pipewire extra sound-server
 media-sound/pulseaudio -daemon
 
 # KeePassXC
