@@ -108,3 +108,5 @@ games-emulation/eden cubeb lto
 sci-libs/onnxruntime python
 
 media-sound/piper server
+
+app-accessibility/speech-dispatcher pipewire
