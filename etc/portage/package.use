@@ -45,7 +45,7 @@ games-emulation/RetroArch network pipewire
 >=dev-python/pyqt5-5.15.11 declarative
 
 # Audacious
-media-plugins/audacious-plugins opus pipewire -pulseaudio 
+media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 
 # required by app-containers/incus-6.11::gentoo
 # required by incus (argument)
