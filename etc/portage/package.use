@@ -110,3 +110,5 @@ sci-libs/onnxruntime python
 media-sound/piper server
 
 app-accessibility/speech-dispatcher pipewire
+
+media-libs/libsdl2 pipewire
