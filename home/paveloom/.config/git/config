@@ -2,6 +2,7 @@
     gpgSign = true
 [core]
     editor = vim +startinsert
+    quotepath = off
 [init]
     defaultBranch = main
 [pull]
