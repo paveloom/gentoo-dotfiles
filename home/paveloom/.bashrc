@@ -21,5 +21,5 @@ if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
     export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
 fi
 
-# Use `rustup`
+# Prefer the Rust toolchain from `rustup`
 export PATH="${HOME}/.cargo/bin:${PATH}"
