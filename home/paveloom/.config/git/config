@@ -2,7 +2,7 @@
     gpgSign = true
     verbose = true
 [core]
-    editor = vim +startinsert
+    editor = vim +1 +startinsert
     quotepath = off
 [init]
     defaultBranch = main
