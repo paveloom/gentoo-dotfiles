@@ -26,3 +26,6 @@ export PATH="${HOME}/.cargo/bin:${PATH}"
 
 # Add compiled Go packages to the `PATH`
 export PATH="${HOME}/go/bin:${PATH}"
+
+# Enable `direnv` integration
+eval "$(direnv hook bash)"
