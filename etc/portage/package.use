@@ -116,6 +116,9 @@ media-libs/libsdl2 pipewire
 # required by media-gfx/simple-scan[colord]
 x11-misc/colord vala
 
+# required by media-sound/piper-1.3.0::guru
+sci-ml/onnx disableStaticReg
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
