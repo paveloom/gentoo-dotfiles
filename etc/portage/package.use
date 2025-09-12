@@ -121,6 +121,11 @@ sci-ml/onnx disableStaticReg
 
 media-gfx/img2pdf -gui
 
+# required by app-emulation/virt-manager-5.0.0-r2[gui]
+net-dns/dnsmasq script
+net-libs/gnutls tools pkcs11
+net-misc/spice-gtk usbredir
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
