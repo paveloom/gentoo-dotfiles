@@ -126,6 +126,8 @@ net-dns/dnsmasq script
 net-libs/gnutls tools pkcs11
 net-misc/spice-gtk usbredir
 
+app-emulation/qemu pipewire spice usbredir virgl
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
