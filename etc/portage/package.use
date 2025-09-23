@@ -133,6 +133,8 @@ dev-python/pillow webp
 
 media-video/mpv pipewire vaapi
 
+x11-wm/mutter screencast
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
