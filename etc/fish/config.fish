@@ -3,12 +3,7 @@
 # Files in conf.d can be overridden by the user
 # by files with the same name in $XDG_CONFIG_HOME/fish/conf.d
 
-# This file is run by all fish instances.
-# To include configuration only for login shells, use
-# if status is-login
-#    ...
-# end
-# To include configuration only for interactive shells, use
-# if status is-interactive
-#   ...
-# end
+if status is-interactive
+    ## Bind `Ctrl+Backspace` to delete a word behind the cursor
+    bind \b backward-kill-word
+end
