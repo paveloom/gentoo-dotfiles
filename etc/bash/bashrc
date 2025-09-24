@@ -28,3 +28,6 @@ for _ in /etc/bash/bashrc.d/*; do
         source "$_"
     fi
 done
+
+# After initialization, replace Bash with Fish
+[ -x /bin/fish ] && SHELL=/bin/fish exec fish
