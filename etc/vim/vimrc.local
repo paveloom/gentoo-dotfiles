@@ -15,3 +15,6 @@ set imsearch=0
 
 " Wrap long lines at a character in 'breakat'
 set linebreak
+
+" Ignore case in search patterns
+set ignorecase
