@@ -1,3 +1,6 @@
+[bash]
+    showInformativeStatus = true
+    showUntrackedFiles = true
 [commit]
     gpgSign = true
     verbose = true
