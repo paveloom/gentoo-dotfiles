@@ -7,6 +7,9 @@ if status is-interactive
     # Allow jumping back to Bash if necessary
     alias bash='env NOFISH=1 bash'
 
-    ## Bind `Ctrl+Backspace` to delete a word behind the cursor
+    # Bind `Ctrl+Backspace` to delete a word behind the cursor
     bind \b backward-kill-word
+
+    # Enable `fzf` integration
+    fzf --fish | source
 end
