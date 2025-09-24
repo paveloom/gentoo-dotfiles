@@ -30,4 +30,6 @@ for _ in /etc/bash/bashrc.d/*; do
 done
 
 # After initialization, replace Bash with Fish
-[ -x /bin/fish ] && SHELL=/bin/fish exec fish
+if [ -x /bin/fish ] && [ -z "$NOFISH" ]; then
+    SHELL=/bin/fish exec fish
+fi

@@ -4,6 +4,9 @@
 # by files with the same name in $XDG_CONFIG_HOME/fish/conf.d
 
 if status is-interactive
+    # Allow jumping back to Bash if necessary
+    alias bash='env NOFISH=1 bash'
+
     ## Bind `Ctrl+Backspace` to delete a word behind the cursor
     bind \b backward-kill-word
 end
