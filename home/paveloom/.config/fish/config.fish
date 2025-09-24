@@ -1,3 +1,17 @@
 if status is-interactive
-    # Commands to run in interactive sessions can go here
+    # Use the `gpg-agent` for the SSH protocol
+    set -q gnupg_SSH_AUTH_SOCK_by; or set -l gnupg_SSH_AUTH_SOCK_by 0
+    if test $gnupg_SSH_AUTH_SOCK_by -ne %self
+        gpgconf --launch gpg-agent
+        set -x SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
+    end
+
+    # Prefer the Rust toolchain from `rustup`
+    fish_add_path $HOME/.cargo/bin
+
+    # Add compiled Go packages to the `PATH`
+    fish_add_path $HOME/go/bin
+
+    # Enable `direnv` integration
+    direnv hook fish | source
 end

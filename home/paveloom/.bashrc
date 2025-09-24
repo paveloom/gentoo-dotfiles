@@ -14,18 +14,3 @@ if [[ $- != *i* ]]; then
 fi
 
 # Put your fun stuff here.
-
-# Use the `gpg-agent` for the SSH protocol
-if [ "${gnupg_SSH_AUTH_SOCK_by:-0}" -ne $$ ]; then
-    gpgconf --launch gpg-agent
-    export SSH_AUTH_SOCK="$(gpgconf --list-dirs agent-ssh-socket)"
-fi
-
-# Prefer the Rust toolchain from `rustup`
-export PATH="${HOME}/.cargo/bin:${PATH}"
-
-# Add compiled Go packages to the `PATH`
-export PATH="${HOME}/go/bin:${PATH}"
-
-# Enable `direnv` integration
-eval "$(direnv hook bash)"
