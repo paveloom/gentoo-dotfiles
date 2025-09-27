@@ -7,9 +7,6 @@
 set -U fish_greeting
 
 if status is-interactive
-    # Allow jumping back to Bash if necessary
-    alias bash='env NOFISH=1 bash'
-
     # Bind `Ctrl+Backspace` to delete a word behind the cursor
     bind \b backward-kill-word
 

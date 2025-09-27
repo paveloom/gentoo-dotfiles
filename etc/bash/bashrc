@@ -28,8 +28,3 @@ for _ in /etc/bash/bashrc.d/*; do
         source "$_"
     fi
 done
-
-# After initialization, replace Bash with Fish
-if [ -x /bin/fish ] && [ -z "$NOFISH" ]; then
-    SHELL=/bin/fish exec fish
-fi
