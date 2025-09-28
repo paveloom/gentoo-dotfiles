@@ -5,11 +5,3 @@
 
 # Disable the greeting
 set -U fish_greeting
-
-if status is-interactive
-    # Bind `Ctrl+Backspace` to delete a word behind the cursor
-    bind \b backward-kill-word
-
-    # Enable `fzf` integration
-    fzf --fish | source
-end
