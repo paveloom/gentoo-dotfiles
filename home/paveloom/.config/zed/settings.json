@@ -21,11 +21,6 @@
     "git_status": true,
     "show_diagnostics": "all"
   },
-  "terminal": {
-    "toolbar": {
-      "title": false
-    }
-  },
   "theme": "One Light",
   "toolbar": {
     "breadcrumbs": false,
