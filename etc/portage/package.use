@@ -27,7 +27,7 @@ www-client/vivaldi proprietary-codecs widevine
 media-libs/mesa vaapi
 
 # FFMPEG
-media-video/ffmpeg fdk opus vaapi vpx
+media-video/ffmpeg fdk opus svt-av1 vaapi vpx
 
 # Evolution
 mail-client/evolution archive -weather
