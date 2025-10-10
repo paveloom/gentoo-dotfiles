@@ -27,7 +27,7 @@ www-client/vivaldi proprietary-codecs widevine
 media-libs/mesa vaapi
 
 # FFMPEG
-media-video/ffmpeg opus vaapi vpx
+media-video/ffmpeg fdk opus vaapi vpx
 
 # Evolution
 mail-client/evolution archive -weather
@@ -97,7 +97,7 @@ media-libs/freetype harfbuzz
 
 net-vpn/frp -server
 
-media-video/obs-studio pipewire v4l websocket
+media-video/obs-studio fdk pipewire v4l websocket
 
 media-libs/libheif examples x265
 
