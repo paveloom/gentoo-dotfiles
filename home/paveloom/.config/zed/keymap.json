@@ -2,6 +2,7 @@
   {
     "context": "Editor",
     "bindings": {
+      "alt-/": "editor::ToggleInlineDiagnostics",
       "alt-z": "editor::ToggleSoftWrap"
     }
   },
