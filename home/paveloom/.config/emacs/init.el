@@ -1,6 +1,8 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
+(setopt project-mode-line t)
+
 ;; The desktop.el package sets the `desktop-dirname' variable
 ;; itself, but it picks the default value from the first element of
 ;; the `desktop-path' list, which we make sure to prepare
