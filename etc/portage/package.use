@@ -135,6 +135,9 @@ media-video/mpv pipewire vaapi
 
 x11-wm/mutter screencast
 
+app-editors/emacs tree-sitter jit -X
+sys-devel/gcc jit
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
