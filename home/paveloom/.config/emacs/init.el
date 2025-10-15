@@ -8,6 +8,7 @@
 (setopt project-mode-line t)
 
 (setopt eglot-autoshutdown t)
+(setopt eglot-extend-to-xref t)
 
 ;; The desktop.el package sets the `desktop-dirname' variable
 ;; itself, but it picks the default value from the first element of
