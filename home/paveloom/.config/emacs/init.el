@@ -4,7 +4,7 @@
 (setopt indent-tabs-mode nil
         tab-width 4)
 
-(cua-mode)
+(cua-mode 1)
 
 (setopt treesit-font-lock-level 4)
 
