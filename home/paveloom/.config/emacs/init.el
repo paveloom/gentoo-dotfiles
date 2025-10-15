@@ -1,6 +1,8 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
+(setopt indent-tabs-mode nil)
+
 (cua-mode)
 
 (setopt treesit-font-lock-level 4)
