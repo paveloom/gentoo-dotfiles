@@ -3,6 +3,8 @@
 
 (column-number-mode 1)
 
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+
 (setopt indent-tabs-mode nil
         tab-width 4)
 
