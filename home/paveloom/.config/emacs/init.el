@@ -10,6 +10,7 @@
                             (flyspell-prog-mode)))
 
 (setopt indent-tabs-mode nil
+        tab-always-indent 'complete
         tab-width 4)
 
 (setopt whitespace-style '(face tabs tab-mark trailing missing-newline-at-eof
