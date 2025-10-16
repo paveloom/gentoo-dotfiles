@@ -3,7 +3,11 @@
 
 (column-number-mode 1)
 
-(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+
+(add-hook 'prog-mode-hook (lambda ()
+                            (display-line-numbers-mode)
+                            (flyspell-prog-mode)))
 
 (setopt indent-tabs-mode nil
         tab-width 4)
