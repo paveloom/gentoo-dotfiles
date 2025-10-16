@@ -11,7 +11,8 @@
 
 (setopt indent-tabs-mode nil
         tab-always-indent 'complete
-        tab-width 4)
+        tab-width 4
+        go-ts-mode-indent-offset tab-width)
 
 (setopt whitespace-style '(face tabs tab-mark trailing missing-newline-at-eof
                                 space-after-tab space-before-tab)
