@@ -1,3 +1,5 @@
+(setopt custom-file (file-name-concat user-emacs-directory "custom.el"))
+
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
