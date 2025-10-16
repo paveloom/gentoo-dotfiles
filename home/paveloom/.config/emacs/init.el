@@ -37,6 +37,14 @@
 (setq desktop-dirname (file-name-concat user-emacs-directory "desktops"))
 (make-directory desktop-dirname t)
 (setopt desktop-path (list desktop-dirname))
+
+;; Regular expressions identifying files whose buffers are to be
+;; excluded from saving to the desktop file, in order:
+;;
+;; - "\`/[^/:]*:" (e.g., "/root@server:")
+;; - "\`/usr/lib/go/" (Go's standard library)
+(setopt desktop-files-not-to-save "\\(\\`/[^/:]*:\\|\\`/usr/lib/go/\\)")
+
 (desktop-save-mode 1)
 
 (setopt server-name "server")
