@@ -21,9 +21,9 @@
         whitespace-display-mappings '((space-mark 32 [183])     ; `·` (regular space)
                                       (space-mark 160 [164])    ; `¤` (wide space)
                                       (newline-mark 10 [36 10]) ; `$`
-                                      (tab-mark 9 [8594 9])))   ; `→`
+                                      (tab-mark 9 [8250 9])))   ; `›`
 (global-whitespace-mode 1)
-(set-face-attribute 'whitespace-tab nil :height 0.8 :background nil)
+(set-face-attribute 'whitespace-tab nil :background nil)
 
 (cua-mode 1)
 
