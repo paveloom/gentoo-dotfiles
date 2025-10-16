@@ -23,7 +23,7 @@
                                       (newline-mark 10 [36 10]) ; `$`
                                       (tab-mark 9 [8250 9])))   ; `›`
 (global-whitespace-mode 1)
-(set-face-attribute 'whitespace-tab nil :background nil)
+(set-face-attribute 'whitespace-tab nil :background 'unspecified)
 
 (cua-mode 1)
 
