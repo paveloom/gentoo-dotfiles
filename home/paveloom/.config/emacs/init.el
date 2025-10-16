@@ -1,6 +1,8 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
+(column-number-mode 1)
+
 (setopt indent-tabs-mode nil
         tab-width 4)
 
