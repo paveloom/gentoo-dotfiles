@@ -4,6 +4,16 @@
 (setopt indent-tabs-mode nil
         tab-width 4)
 
+(setopt whitespace-style '(face tabs tab-mark trailing missing-newline-at-eof
+                                space-after-tab space-before-tab)
+        ;; The numbers are UTF-16 code units (which are hexademical) converted to decimal
+        whitespace-display-mappings '((space-mark 32 [183])     ; `·` (regular space)
+                                      (space-mark 160 [164])    ; `¤` (wide space)
+                                      (newline-mark 10 [36 10]) ; `$`
+                                      (tab-mark 9 [8594 9])))   ; `→`
+(global-whitespace-mode 1)
+(set-face-attribute 'whitespace-tab nil :height 0.8 :background nil)
+
 (cua-mode 1)
 
 (setopt treesit-font-lock-level 4)
