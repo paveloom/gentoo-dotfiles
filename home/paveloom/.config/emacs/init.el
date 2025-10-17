@@ -1,6 +1,7 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
+(setopt flyspell-delay 0)
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
