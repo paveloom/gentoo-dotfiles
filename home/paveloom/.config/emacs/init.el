@@ -51,3 +51,5 @@
 (setopt custom-file (file-name-concat user-emacs-directory "custom.el"))
 (when (file-exists-p custom-file)
   (load custom-file))
+
+(require 'markdown-mode)
