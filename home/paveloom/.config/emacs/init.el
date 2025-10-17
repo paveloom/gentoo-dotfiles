@@ -31,6 +31,8 @@
 
 (setopt project-mode-line t)
 
+(setopt eldoc-idle-delay 0)
+
 (setopt eglot-autoshutdown t
         eglot-extend-to-xref t)
 
