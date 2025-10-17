@@ -34,7 +34,8 @@
 (setopt eldoc-idle-delay 0)
 
 (setopt eglot-autoshutdown t
-        eglot-extend-to-xref t)
+        eglot-extend-to-xref t
+        eglot-send-changes-idle-time 0)
 
 ;; Regular expressions identifying files whose buffers are to be
 ;; excluded from saving to the desktop file, in order:
