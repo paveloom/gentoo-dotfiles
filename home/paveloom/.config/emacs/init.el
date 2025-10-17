@@ -24,6 +24,8 @@
 (global-whitespace-mode 1)
 (set-face-attribute 'whitespace-tab nil :background 'unspecified)
 
+(global-word-wrap-whitespace-mode 1)
+
 (cua-mode 1)
 
 (setopt treesit-font-lock-level 4)
