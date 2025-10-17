@@ -19,12 +19,12 @@
                                       (space-mark 160 [164])    ; `¤` (wide space)
                                       (newline-mark 10 [36 10]) ; `$`
                                       (tab-mark 9 [8250 9])))   ; `›`
-(global-whitespace-mode 1)
+(global-whitespace-mode)
 (set-face-attribute 'whitespace-tab nil :background 'unspecified)
 
-(global-word-wrap-whitespace-mode 1)
+(global-word-wrap-whitespace-mode)
 
-(cua-mode 1)
+(cua-mode)
 
 (setopt treesit-font-lock-level 4)
 
@@ -39,7 +39,7 @@
 ;; - "\`/[^/:]*:" (e.g., "/root@server:")
 ;; - "\`/usr/lib/go/" (Go's standard library)
 (setopt desktop-files-not-to-save "\\(\\`/[^/:]*:\\|\\`/usr/lib/go/\\)")
-(desktop-save-mode 1)
+(desktop-save-mode)
 
 (setopt server-name "server")
 (server-start)
