@@ -1,14 +1,11 @@
 (add-to-list 'initial-frame-alist '(fullscreen . maximized))
 (add-to-list 'default-frame-alist '(font . "JetBrainsMono Nerd Font-14"))
 
-(column-number-mode 1)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'prog-mode-hook 'flyspell-prog-mode)
 
-(add-hook 'text-mode-hook (lambda ()
-                            (flyspell-mode 1)))
-
-(add-hook 'prog-mode-hook (lambda ()
-                            (display-line-numbers-mode 1)
-                            (flyspell-prog-mode)))
+(column-number-mode)
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
 
 (setopt indent-tabs-mode nil
         tab-always-indent 'complete
