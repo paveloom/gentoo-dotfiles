@@ -13,3 +13,5 @@ if not vim.uv.fs_stat(path_mini) then
 end
 
 require("mini.deps").setup({ path = { package = path_package } })
+
+vim.cmd.colorscheme("custom")
