@@ -4,3 +4,6 @@ inherits = "adwaita-light"
 "ui.cursor" = { fg = "light_2", bg = "dark_1" }
 "ui.cursor.select" = { fg = "light_2", bg = "dark_1" }
 "ui.cursor.insert" = { fg = "light_2", bg = "dark_1" }
+
+# Make the currently selected line in a picker visible
+"ui.text.focus" = { bg = "blue_0" }
