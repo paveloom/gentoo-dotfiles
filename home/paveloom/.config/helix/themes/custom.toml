@@ -1,0 +1,6 @@
+inherits = "adwaita-light"
+
+# Make secondary cursors differ from the primary one
+"ui.cursor" = { fg = "light_2", bg = "dark_1" }
+"ui.cursor.select" = { fg = "light_2", bg = "dark_1" }
+"ui.cursor.insert" = { fg = "light_2", bg = "dark_1" }

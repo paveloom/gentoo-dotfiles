@@ -1,4 +1,4 @@
-theme = "adwaita-light"
+theme = "custom"
 
 [editor.file-picker]
 hidden = false
