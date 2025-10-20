@@ -10,11 +10,11 @@ display-progress-messages = true
 left = [
   "mode",
   "spinner",
-  "spacer",
-  "file-modification-indicator",
   "file-name",
   "read-only-indicator",
-  "diagnostics"
+  "spacer",
+  "diagnostics",
+  "file-modification-indicator",
 ]
 right = [
   "version-control",
