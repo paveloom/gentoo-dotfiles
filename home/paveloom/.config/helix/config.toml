@@ -5,3 +5,28 @@ hidden = false
 
 [editor.lsp]
 display-progress-messages = true
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "spacer",
+  "file-modification-indicator",
+  "file-name",
+  "read-only-indicator",
+  "diagnostics"
+]
+right = [
+  "version-control",
+  "spacer",
+  "workspace-diagnostics",
+  "selections",
+  "primary-selection-length",
+  "register",
+  "position",
+  "position-percentage",
+  "spacer",
+  "file-type",
+  "file-indent-style",
+  "file-encoding"
+]
