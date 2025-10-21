@@ -6,3 +6,7 @@ completeFunctionCalls = false
 css.validate.enable = true
 format.insertFinalNewline = true
 provideFormatter = true
+
+[language-server.vscode-html-language-server.config]
+format.endWithNewline = true
+provideFormatter = true
