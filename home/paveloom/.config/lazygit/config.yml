@@ -21,9 +21,3 @@ git:
 quitOnTopLevelReturn: true
 notARepository: skip
 promptToReturnFromSubprocess: false
-keybinding:
-  stash:
-    popStash: p
-  files:
-    toggleTreeView: t
-    viewResetOptions: R
