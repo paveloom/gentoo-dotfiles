@@ -5,3 +5,6 @@
 
 # Disable the greeting
 set -U fish_greeting
+
+# Set the default editor
+set -x EDITOR /bin/hx
