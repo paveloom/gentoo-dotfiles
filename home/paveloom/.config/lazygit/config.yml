@@ -28,11 +28,6 @@ keybinding:
     toggleTreeView: t
     viewResetOptions: R
 customCommands:
-  - key: c
-    description: commit changes
-    context: files
-    command: git commit -v
-    output: terminal
   - key: D
     description: Commit all staged files and push right after
     context: global
