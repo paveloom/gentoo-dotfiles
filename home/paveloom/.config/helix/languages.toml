@@ -1,0 +1,3 @@
+[language-server.gopls.config]
+# Do not insert parentheses on completed function calls
+completeFunctionCalls = false
