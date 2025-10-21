@@ -5,7 +5,6 @@
     gpgSign = true
     verbose = true
 [core]
-    editor = vim +1 +startinsert
     quotepath = off
 [init]
     defaultBranch = main
