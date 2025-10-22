@@ -1,0 +1,12 @@
+set hidden
+
+set incfilter
+set incsearch
+
+set nopreview
+set ratios 1:1:1:1:1:1
+
+map a push %touch<space>
+map d push %mkdir<space>
+map <delete> delete $fx
+map <esc> unselect
