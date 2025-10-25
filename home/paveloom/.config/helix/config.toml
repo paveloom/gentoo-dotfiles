@@ -9,6 +9,11 @@ hidden = false
 [editor.lsp]
 display-progress-messages = true
 
+[editor.soft-wrap]
+enable = true
+wrap-indicator = ""
+wrap-at-text-width = true
+
 [editor.statusline]
 left = [
   "mode",
