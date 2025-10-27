@@ -10,3 +10,7 @@ provideFormatter = true
 [language-server.vscode-html-language-server.config]
 format.endWithNewline = true
 provideFormatter = true
+
+[[language]]
+name = "markdown"
+language-servers = [ "marksman", "harper-ls" ]
