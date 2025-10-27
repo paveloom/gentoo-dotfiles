@@ -6,7 +6,15 @@ set incsearch
 set nopreview
 set ratios 1:1:1:1:1:1
 
+cmd trash ${{
+    set -f
+    printf "$fx\n"
+    printf "trash? [y/N] "
+    read ans
+    [ "$ans" = "y" ] && trash $fx
+}}
+
 map a push %touch<space>
 map d push %mkdir<space>
-map <delete> delete $fx
+map <delete> trash $fx
 map <esc> unselect
