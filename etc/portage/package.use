@@ -138,6 +138,8 @@ x11-wm/mutter screencast
 app-editors/emacs tree-sitter jit -X
 sys-devel/gcc jit
 
+media-libs/libbluray bdplus java
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
