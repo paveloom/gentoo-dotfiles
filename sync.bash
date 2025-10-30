@@ -1,28 +1,28 @@
 #!/usr/bin/env bash
 
 PREFIX="/"
-ROOT="$(realpath -e $0 | xargs dirname)"
+ROOT="$(realpath -e "$0" | xargs dirname)"
 
 symlink_file() {
     local input_file="$1"
 
     local output_file
-    output_file="$PREFIX$(realpath -s --relative-to $ROOT $input_file)"
+    output_file="$PREFIX$(realpath -s --relative-to "$ROOT" "$input_file")"
 
-    if sudo test -e $output_file; then
-        if sudo test -L $output_file; then
+    if sudo test -e "$output_file"; then
+        if sudo test -L "$output_file"; then
             local target
-            target="$(sudo readlink $output_file)"
+            target="$(sudo readlink "$output_file")"
 
             if [[ "$target" == "$input_file" ]]; then
                 return
             fi
 
             local file_type
-            file_type="$(file -bL $target)"
+            file_type="$(file -bL "$target")"
 
             echo "file $output_file is a symbolic link to $target ($file_type)"
-            read -p "Override? (y/n): " confirm </dev/tty
+            read -r -p "Override? (y/n): " confirm </dev/tty
             if [[ "$confirm" != "y" ]]; then
                 return
             fi
@@ -32,7 +32,7 @@ symlink_file() {
         fi
     fi
 
-    if [[ ! -w "$(dirname $output_file)" ]]; then
+    if [[ ! -w "$(dirname "$output_file")" ]]; then
         sudo ln -fs -T "$input_file" "$output_file"
     else
         ln -fs -T "$input_file" "$output_file"
