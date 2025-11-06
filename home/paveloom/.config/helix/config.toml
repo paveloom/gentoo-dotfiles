@@ -45,6 +45,7 @@ C-up = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_li
 C-down = ["move_line_down", "move_line_down", "move_line_down", "move_line_down", "move_line_down"]
 
 [keys.normal]
+C-s = ":write"
 C-left = "move_prev_word_start"
 C-right = "move_next_word_start"
 C-up = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_line_up"]
