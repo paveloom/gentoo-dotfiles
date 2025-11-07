@@ -2,6 +2,9 @@
 # Do not insert parentheses on completed function calls
 completeFunctionCalls = false
 
+[language-server.scls]
+command = "simple-completion-language-server"
+
 [language-server.vscode-css-language-server.config]
 css.validate.enable = true
 format.insertFinalNewline = true
@@ -10,6 +13,10 @@ provideFormatter = true
 [language-server.vscode-html-language-server.config]
 format.endWithNewline = true
 provideFormatter = true
+
+[[language]]
+name = "go"
+language-servers = ["gopls", "scls"]
 
 [[language]]
 name = "markdown"
