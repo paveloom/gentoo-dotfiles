@@ -1,3 +1,7 @@
+[language-server.codebook]
+command = "codebook-lsp"
+args = ["serve"]
+
 [language-server.gopls.config]
 # Do not insert parentheses on completed function calls
 completeFunctionCalls = false
