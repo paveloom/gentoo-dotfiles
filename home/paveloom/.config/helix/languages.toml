@@ -1,3 +1,5 @@
+# Note that default configs have to be copied for per-workspace configuration!
+
 [language-server.codebook]
 command = "codebook-lsp"
 args = ["serve"]
