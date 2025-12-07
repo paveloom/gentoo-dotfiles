@@ -143,6 +143,8 @@ media-video/vlc bluray vaapi
 
 app-text/tessdata_best L10N: en
 
+media-libs/gd fontconfig
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
