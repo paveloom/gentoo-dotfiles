@@ -6,3 +6,6 @@ vim.cmd.colorscheme("custom")
 
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
+
+-- Use rounded borders on all floating windows
+vim.opt.winborder = "rounded"
