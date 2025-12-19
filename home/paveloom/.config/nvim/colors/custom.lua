@@ -1,6 +1,6 @@
 -- Code in this file is run as part of the `vim.cmd.colorscheme("custom")` call
 
-require('mini.hues').setup({
+require("mini.hues").setup({
   background = "#ffffff",
   foreground = "#3b413c",
   saturation = "high",
