@@ -6,6 +6,7 @@ return {
         checkThirdParty = false,
         library = {
           vim.env.VIMRUNTIME,
+          "${3rd}/luv/library",
           unpack(vim.api.nvim_get_runtime_file("", true)),
         }
       }
