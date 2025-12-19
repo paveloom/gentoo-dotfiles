@@ -1,12 +1,14 @@
 local site = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
 
-local function bootstrap(name)
+local function bootstrap(spec)
+  local name = spec.name or vim.fn.fnamemodify(spec.source, ":t")
   local path = vim.fs.joinpath(site, "pack/deps/start", name)
   if not vim.uv.fs_stat(path) then
     vim.notify("Bootstrapping `" .. name .. "`...")
-    local url = "https://github.com/nvim-mini/" .. name
+    local url = "https://github.com/" .. spec.source
     vim.system({
-      "git", "clone", "--filter=blob:none", "--branch=v0.17.0",
+      "git", "clone", "--filter=blob:none",
+      "--branch", spec.checkout,
       url, path
     }):wait()
     vim.cmd.packadd(name)
@@ -34,7 +36,10 @@ local function add(specs)
   end
 end
 
-bootstrap("mini.deps")
+bootstrap({
+  source = "nvim-mini/mini.deps",
+  checkout = "v0.17.0",
+})
 
 setup()
 
