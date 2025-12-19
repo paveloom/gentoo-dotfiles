@@ -7,7 +7,10 @@ local function bootstrap(name)
   if not vim.uv.fs_stat(path) then
     vim.notify("Installing `" .. name .. "`...")
     local url = "https://github.com/nvim-mini/" .. name
-    vim.system({ "git", "clone", "--filter=blob:none", url, path }):wait()
+    vim.system({
+      "git", "clone", "--filter=blob:none", "--branch=v0.17.0",
+      url, path
+    }):wait()
     vim.cmd.packadd(name)
     vim.cmd.helptags(vim.fs.joinpath(path, "doc"))
   end
