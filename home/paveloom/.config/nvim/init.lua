@@ -2,6 +2,8 @@
 
 local path_package = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
 
+vim.cmd.redraw()
+
 local function bootstrap(name)
   local path = vim.fs.joinpath(path_package, "pack/deps/start", name)
   if not vim.uv.fs_stat(path) then
@@ -13,6 +15,7 @@ local function bootstrap(name)
     }):wait()
     vim.cmd.packadd(name)
     vim.cmd.helptags(vim.fs.joinpath(path, "doc"))
+    vim.cmd.redraw()
   end
 end
 
