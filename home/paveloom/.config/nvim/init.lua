@@ -19,7 +19,10 @@ end
 bootstrap("mini.deps")
 bootstrap("mini.hues")
 
-require("mini.deps").setup({ path = { package = path_package } })
+require("mini.deps").setup({
+  job = { timeout = 60000 },
+  path = { package = path_package }
+})
 
 MiniDeps.add({
   source = "neovim/nvim-lspconfig",
