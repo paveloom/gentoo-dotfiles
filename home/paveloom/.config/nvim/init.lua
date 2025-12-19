@@ -22,13 +22,16 @@ local function setup()
   })
 end
 
-local function add(spec, opts)
-  local name = spec.name or vim.fn.fnamemodify(spec.source, ":t")
-  local path = vim.fs.joinpath(site, "pack/deps/opt", name)
-  if not vim.uv.fs_stat(path) then
-    vim.notify("Installing `" .. name .. "`...")
+---@param specs table[]
+local function add(specs)
+  for _, spec in ipairs(specs) do
+    local name = spec.name or vim.fn.fnamemodify(spec.source, ":t")
+    local path = vim.fs.joinpath(site, "pack/deps/opt", name)
+    if not vim.uv.fs_stat(path) then
+      vim.notify("Installing `" .. name .. "`...")
+    end
+    require("mini.deps").add(spec, {})
   end
-  require("mini.deps").add(spec, opts)
 end
 
 bootstrap("mini.deps")
@@ -37,14 +40,16 @@ bootstrap("mini.hues")
 setup()
 
 add({
-  source = "neovim/nvim-lspconfig",
-  checkout = "v2.5.0"
-})
-add({
-  source = "nvim-neo-tree/neo-tree.nvim",
-  checkout = "v3.x",
-  depends = {
-    "nvim-lua/plenary.nvim",
-    "MunifTanjim/nui.nvim"
+  {
+    source = "neovim/nvim-lspconfig",
+    checkout = "v2.5.0"
+  },
+  {
+    source = "nvim-neo-tree/neo-tree.nvim",
+    checkout = "v3.x",
+    depends = {
+      "nvim-lua/plenary.nvim",
+      "MunifTanjim/nui.nvim"
+    }
   }
 })
