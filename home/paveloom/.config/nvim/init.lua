@@ -1,6 +1,42 @@
-local deps = require("deps")
+local site = vim.fs.joinpath(vim.fn.stdpath("data"), "site")
 
-deps.bootstrap("mini.deps")
-deps.bootstrap("mini.hues")
+local function bootstrap(name)
+  local path = vim.fs.joinpath(site, "pack/deps/start", name)
+  if not vim.uv.fs_stat(path) then
+    vim.notify("Bootstrapping `" .. name .. "`...")
+    local url = "https://github.com/nvim-mini/" .. name
+    vim.system({
+      "git", "clone", "--filter=blob:none", "--branch=v0.17.0",
+      url, path
+    }):wait()
+    vim.cmd.packadd(name)
+    vim.cmd.helptags(vim.fs.joinpath(path, "doc"))
+  end
+end
 
-deps.setup()
+local function setup()
+  require("mini.deps").setup({
+    job = { timeout = 60000 },
+    path = { package = site },
+    silent = true
+  })
+end
+
+local function add(spec, opts)
+  local name = spec.name or vim.fn.fnamemodify(spec.source, ":t")
+  local path = vim.fs.joinpath(site, "pack/deps/opt", name)
+  if not vim.uv.fs_stat(path) then
+    vim.notify("Installing `" .. name .. "`...")
+  end
+  require("mini.deps").add(spec, opts)
+end
+
+bootstrap("mini.deps")
+bootstrap("mini.hues")
+
+setup()
+
+add({
+  source = "neovim/nvim-lspconfig",
+  checkout = "v2.5.0"
+})
