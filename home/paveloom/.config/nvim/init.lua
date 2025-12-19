@@ -53,6 +53,10 @@ add({
     checkout = "v2.5.0"
   },
   {
+    source = "nvim-tree/nvim-web-devicons",
+    checkout = "v0.100"
+  },
+  {
     source = "nvim-tree/nvim-tree.lua",
     checkout = "v1.14.0"
   }
