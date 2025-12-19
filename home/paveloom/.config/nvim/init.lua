@@ -20,3 +20,8 @@ bootstrap("mini.deps")
 bootstrap("mini.hues")
 
 require("mini.deps").setup({ path = { package = path_package } })
+
+MiniDeps.add({
+  source = "neovim/nvim-lspconfig",
+  checkout = "v2.5.0"
+})

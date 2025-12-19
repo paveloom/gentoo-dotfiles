@@ -1,8 +1,3 @@
-MiniDeps.add({
-  source = "neovim/nvim-lspconfig",
-  checkout = "v2.5.0"
-})
-
 vim.lsp.enable("lua_ls")
 
 local group = vim.api.nvim_create_augroup("config.lsp", {})
