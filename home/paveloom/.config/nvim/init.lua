@@ -35,11 +35,14 @@ local function add(specs)
 end
 
 bootstrap("mini.deps")
-bootstrap("mini.hues")
 
 setup()
 
 add({
+  {
+    source = "nvim-mini/mini.hues",
+    checkout = "v0.17.0"
+  },
   {
     source = "neovim/nvim-lspconfig",
     checkout = "v2.5.0"
