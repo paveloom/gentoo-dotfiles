@@ -53,11 +53,7 @@ add({
     checkout = "v2.5.0"
   },
   {
-    source = "nvim-neo-tree/neo-tree.nvim",
-    checkout = "v3.x",
-    depends = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim"
-    }
+    source = "nvim-tree/nvim-tree.lua",
+    checkout = "v1.14.0"
   }
 })
