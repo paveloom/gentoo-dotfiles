@@ -8,3 +8,6 @@ set -U fish_greeting
 
 # Set the default editor
 set -x EDITOR /bin/hx
+
+# Set the path to the `ripgrep` config
+set -x RIPGREP_CONFIG_PATH /etc/ripgrep/config
