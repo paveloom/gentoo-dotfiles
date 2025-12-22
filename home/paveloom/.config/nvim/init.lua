@@ -38,15 +38,15 @@ end
 
 bootstrap({
   source = "nvim-mini/mini.deps",
-  checkout = "v0.17.0",
+  checkout = "v0.17.0"
 })
 
 setup()
 
 add({
+  { source = "folke/snacks.nvim",           checkout = "v2.30.0" },
   { source = "neovim/nvim-lspconfig",       checkout = "v2.5.0" },
   { source = "nvim-mini/mini.hues",         checkout = "v0.17.0" },
-  { source = "nvim-mini/mini.pick",         checkout = "v0.17.0" },
   { source = "nvim-tree/nvim-tree.lua",     checkout = "v1.14.0" },
-  { source = "nvim-tree/nvim-web-devicons", checkout = "v0.100" },
+  { source = "nvim-tree/nvim-web-devicons", checkout = "v0.100" }
 })
