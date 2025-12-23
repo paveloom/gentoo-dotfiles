@@ -4,6 +4,10 @@ vim.cmd.colorscheme("custom")
 -- Show line numbers
 vim.opt.number = true
 
+-- Highlight the current line's number
+vim.opt.cursorline = true
+vim.opt.cursorlineopt = "number"
+
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
 
