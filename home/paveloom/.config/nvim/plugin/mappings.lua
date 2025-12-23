@@ -41,3 +41,10 @@ map("v", "<Tab>", ">gv")
 -- Navigate the jump list with <leader>q and <leader>e
 map("n", "<leader>q", "<C-o>")
 map("n", "<leader>e", "<C-i>")
+
+-- Change and delete into the black hole register
+map({ "n", "x" }, "c", "\"_c")
+map("n", "C", "\"_C")
+map({ "n", "x" }, "d", "\"_d")
+map("n", "D", "\"_D")
+map("x", "p", "pgvy")
