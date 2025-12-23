@@ -28,3 +28,9 @@ map("n", "<C-q>", "<cmd>quit<cr>")
 
 -- Search for the word under the cursor with <C-f>
 map("n", "<C-f>", "*")
+
+-- Change indentation using <Tab>
+map("n", "<S-Tab>", "<<")
+map("n", "<Tab>", ">>")
+map("v", "<S-Tab>", "<gv")
+map("v", "<Tab>", ">gv")
