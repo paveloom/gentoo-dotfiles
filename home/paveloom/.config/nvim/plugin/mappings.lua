@@ -18,3 +18,7 @@ map("i", "<C-H>", "<C-w>")
 
 -- Insert from the system clipboard with <C-v>
 map("i", "<C-v>", "<C-r><C-p>+")
+
+-- Write the current buffer with <C-s>
+map("i", "<C-s>", "<Esc><cmd>write<cr>")
+map("n", "<C-s>", "<cmd>write<cr>")
