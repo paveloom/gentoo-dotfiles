@@ -15,3 +15,6 @@ map({ "n", "v" }, "<C-Up>", "5gk")
 -- Delete previous words with <C-Esc>
 map("c", "<C-H>", "<C-w><C-l>")
 map("i", "<C-H>", "<C-w>")
+
+-- Insert from the system clipboard with <C-v>
+map("i", "<C-v>", "<C-r><C-p>+")
