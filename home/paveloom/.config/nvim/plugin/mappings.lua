@@ -25,3 +25,6 @@ map("n", "<C-s>", "<cmd>write<cr>")
 
 -- Close the current buffer with <C-q>
 map("n", "<C-q>", "<cmd>quit<cr>")
+
+-- Search for the word under the cursor with <C-f>
+map("n", "<C-f>", "*")
