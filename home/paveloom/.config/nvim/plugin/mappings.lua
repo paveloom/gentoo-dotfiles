@@ -1,5 +1,8 @@
 local map = vim.keymap.set
 
+-- Set the leader key
+vim.g.mapleader = " "
+
 -- Move cursor up or down by display lines
 map("i", "<Down>", "<C-o>gj")
 map("i", "<Up>", "<C-o>gk")
