@@ -11,3 +11,7 @@ map("i", "<C-Down>", "<C-o>5gj")
 map("i", "<C-Up>", "<C-o>5gk")
 map({ "n", "v" }, "<C-Down>", "5gj")
 map({ "n", "v" }, "<C-Up>", "5gk")
+
+-- Delete previous words with <C-Esc>
+map("c", "<C-H>", "<C-w><C-l>")
+map("i", "<C-H>", "<C-w>")
