@@ -37,3 +37,7 @@ map("n", "<S-Tab>", "<<")
 map("n", "<Tab>", ">>")
 map("v", "<S-Tab>", "<gv")
 map("v", "<Tab>", ">gv")
+
+-- Navigate the jump list with <leader>q and <leader>e
+map("n", "<leader>q", "<C-o>")
+map("n", "<leader>e", "<C-i>")
