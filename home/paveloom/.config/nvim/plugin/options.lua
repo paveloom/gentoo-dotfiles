@@ -14,6 +14,10 @@ vim.opt.timeout = false
 -- Allow the cursor to move to the upper line while pressing Left
 vim.opt.whichwrap = "<,>,[,]"
 
+-- Make some of the invisible characters visible
+vim.opt.list = true
+vim.opt.listchars = { tab = "  ", trail = "-", nbsp = "+" }
+
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
 
