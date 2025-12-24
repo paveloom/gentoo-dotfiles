@@ -18,6 +18,9 @@ vim.opt.whichwrap = "<,>,[,]"
 vim.opt.list = true
 vim.opt.listchars = { tab = "  ", trail = "-", nbsp = "+" }
 
+-- Wrap at word boundaries
+vim.opt.linebreak = true
+
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
 
