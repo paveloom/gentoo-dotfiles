@@ -27,6 +27,9 @@ vim.opt.undofile = true
 -- Always show the sign column
 vim.opt.signcolumn = "yes"
 
+-- Enable spell checking
+vim.opt.spell = true
+
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
 
