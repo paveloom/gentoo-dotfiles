@@ -39,3 +39,6 @@ vim.opt.winborder = "rounded"
 -- Make searching case insensitive
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
+
+-- Use the system clipboard for all yank, delete, and put operations
+vim.opt.clipboard = "unnamedplus"
