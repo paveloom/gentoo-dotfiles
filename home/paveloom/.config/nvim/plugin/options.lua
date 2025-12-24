@@ -11,6 +11,9 @@ vim.opt.cursorlineopt = "number"
 -- Don't time out on key codes
 vim.opt.timeout = false
 
+-- Allow the cursor to move to the upper line while pressing Left
+vim.opt.whichwrap = "<,>,[,]"
+
 -- Set completion options
 vim.opt.completeopt = { "fuzzy", "menuone", "noselect", "nosort", "preview" }
 
