@@ -33,6 +33,10 @@ vim.keymap.set("n", "<leader>h", function()
   require("snacks").picker.help()
 end)
 
+vim.keymap.set("n", "<leader>H", function()
+  require("snacks").picker.highlights()
+end)
+
 vim.keymap.set("n", "<leader>/", function()
   require("snacks").picker.grep()
 end)
