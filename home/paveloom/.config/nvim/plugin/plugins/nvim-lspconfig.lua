@@ -1,3 +1,4 @@
+vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 
 local group = vim.api.nvim_create_augroup("config.lsp", {})
