@@ -48,3 +48,20 @@ map("n", "C", "\"_C")
 map({ "n", "x" }, "d", "\"_d")
 map("n", "D", "\"_D")
 map("x", "p", "pgvy")
+
+-- Switch between modes of viewing diagnostics with <A-v>
+map("n", "<A-v>", function()
+  local config = vim.diagnostic.config() or {}
+
+  if config.virtual_text then
+    vim.diagnostic.config({ virtual_lines = true, virtual_text = false })
+    return
+  end
+
+  if config.virtual_lines then
+    vim.diagnostic.config({ virtual_lines = false, virtual_text = false })
+    return
+  end
+
+  vim.diagnostic.config({ virtual_lines = false, virtual_text = true })
+end)
