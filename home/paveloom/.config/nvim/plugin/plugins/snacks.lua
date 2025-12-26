@@ -12,7 +12,7 @@ require("snacks").setup({
     win = {
       input = {
         keys = {
-          ["<Esc>"]      = { "close", mode = { "n" } },
+          ["<Esc>"]      = { "close", mode = { "n", "i" } },
           ["<PageDown>"] = { "preview_scroll_down", mode = { "n", "i" } },
           ["<PageUp>"]   = { "preview_scroll_up", mode = { "n", "i" } }
         }
