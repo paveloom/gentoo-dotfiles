@@ -1,5 +1,5 @@
 -- Set the color scheme
-vim.cmd.colorscheme("custom")
+vim.cmd.colorscheme("adwaita_light")
 
 -- Show line numbers
 vim.opt.number = true
