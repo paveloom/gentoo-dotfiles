@@ -44,6 +44,7 @@ bootstrap({
 setup()
 
 add({
+  { source = "Darazaki/indent-o-matic",         checkout = "764da1f" },
   { source = "folke/snacks.nvim",               checkout = "v2.30.0" },
   { source = "neovim/nvim-lspconfig",           checkout = "v2.5.0" },
   { source = "nvim-mini/mini.hipatterns",       checkout = "v0.17.0" },
