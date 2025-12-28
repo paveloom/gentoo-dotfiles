@@ -176,6 +176,7 @@ media-libs/libva abi_x86_32
 media-libs/libvorbis abi_x86_32
 media-libs/mesa abi_x86_32
 media-libs/opus abi_x86_32
+media-libs/vulkan-loader abi_x86_32
 media-sound/lame abi_x86_32
 media-sound/mpg123-base abi_x86_32
 net-libs/libasyncns abi_x86_32
