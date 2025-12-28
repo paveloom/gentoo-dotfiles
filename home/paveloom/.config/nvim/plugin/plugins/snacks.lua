@@ -3,10 +3,23 @@ require("snacks").setup({
     hidden = true,
     layout = {
       layout = {
+        box = "vertical",
         backdrop = false,
         width = 0.9,
         height = 0.9,
-        row = 1
+        row = 1,
+        {
+          box = "vertical",
+          border = true,
+          title = "{title} {live} {flags}",
+          { win = "input", height = 1, border = "bottom" },
+          { win = "list" }
+        },
+        {
+          border = true,
+          title = "{preview}",
+          win = "preview"
+        }
       }
     },
     win = {
