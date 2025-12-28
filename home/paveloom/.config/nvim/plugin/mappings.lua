@@ -23,7 +23,6 @@ map("i", "<C-H>", "<C-w>")
 map("i", "<C-v>", "<C-r><C-p>+")
 
 -- Write the current buffer with <C-s>
-map("i", "<C-s>", "<Esc><cmd>write<cr>")
 map("n", "<C-s>", "<cmd>write<cr>")
 
 -- Close the current buffer with <C-q>
