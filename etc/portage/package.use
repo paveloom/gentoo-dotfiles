@@ -141,6 +141,8 @@ app-text/tessdata_best L10N: en
 
 media-libs/gd fontconfig
 
+dev-lang/luajit lua52compat
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
