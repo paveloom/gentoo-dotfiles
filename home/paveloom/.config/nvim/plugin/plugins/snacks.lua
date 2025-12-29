@@ -39,7 +39,9 @@ vim.keymap.set("n", "<leader>b", function()
 end)
 
 vim.keymap.set("n", "<leader>f", function()
-  require("snacks").picker.smart()
+  require("snacks").picker.smart({
+    multi = { "buffers", "files" }
+  })
 end)
 
 vim.keymap.set("n", "<leader>h", function()
