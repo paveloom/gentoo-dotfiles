@@ -1,7 +1,7 @@
 -- To reload the theme, run `:colorscheme adwaita_light`
 
 if vim.g.colors_name ~= nil then vim.cmd.highlight("clear") end
-vim.g.colors_name = "adwaita_light"
+vim.g.colors_name = "custom"
 
 ---@diagnostic disable: unused-local
 
