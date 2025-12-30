@@ -44,9 +44,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "<leader>r", function()
       require("snacks").picker.lsp_references()
     end)
+
     map("n", "<leader>s", function()
       require("snacks").picker.lsp_symbols()
     end)
+
     map("n", "<leader>S", function()
       require("snacks").picker.lsp_workspace_symbols()
     end)
