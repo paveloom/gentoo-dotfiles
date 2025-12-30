@@ -10,7 +10,6 @@ require("nvim-tree").setup({
   renderer = {
     highlight_git = "name",
     icons = {
-      diagnostics_placement = "after",
       show = {
         git = false
       }
@@ -39,7 +38,13 @@ require("nvim-tree").setup({
   end,
   diagnostics = {
     enable = true,
-    show_on_dirs = true
+    show_on_dirs = true,
+    icons = {
+      hint = "H",
+      info = "I",
+      warning = "W",
+      error = "E"
+    }
   },
   modified = {
     enable = true
