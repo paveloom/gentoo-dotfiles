@@ -38,6 +38,14 @@ vim.keymap.set("n", "<leader>b", function()
   require("snacks").picker.buffers()
 end)
 
+vim.keymap.set("n", "<leader>d", function()
+  require("snacks").picker.diagnostics_buffer()
+end)
+
+vim.keymap.set("n", "<leader>D", function()
+  require("snacks").picker.diagnostics()
+end)
+
 vim.keymap.set("n", "<leader>f", function()
   require("snacks").picker.smart({
     multi = { "buffers", "files" }
