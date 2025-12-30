@@ -24,9 +24,6 @@ vim.opt.linebreak = true
 -- Keep undo history
 vim.opt.undofile = true
 
--- Always show the sign column
-vim.opt.signcolumn = "yes"
-
 -- Enable spell checking
 vim.opt.spell = true
 
@@ -42,3 +39,22 @@ vim.opt.smartcase = true
 
 -- Use the system clipboard for all yank, delete, and put operations
 vim.opt.clipboard = "unnamedplus"
+
+-- Always show the sign column
+vim.opt.signcolumn = "yes"
+
+-- Set up diagnostics
+vim.diagnostic.config({
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN] = "",
+      [vim.diagnostic.severity.HINT] = "",
+      [vim.diagnostic.severity.INFO] = ""
+    },
+    numhl = {
+      [vim.diagnostic.severity.ERROR] = "ErrorMsg",
+      [vim.diagnostic.severity.WARN] = "WarningMsg"
+    }
+  }
+})
