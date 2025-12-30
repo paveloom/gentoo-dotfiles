@@ -38,13 +38,7 @@ require("nvim-tree").setup({
   end,
   diagnostics = {
     enable = true,
-    show_on_dirs = true,
-    icons = {
-      hint = "H",
-      info = "I",
-      warning = "W",
-      error = "E"
-    }
+    show_on_dirs = true
   },
   modified = {
     enable = true
