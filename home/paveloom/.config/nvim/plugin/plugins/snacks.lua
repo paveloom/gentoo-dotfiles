@@ -34,36 +34,38 @@ require("snacks").setup({
   }
 })
 
-vim.keymap.set("n", "<leader>b", function()
+local map = vim.keymap.set
+
+map("n", "<leader>b", function()
   require("snacks").picker.buffers()
 end)
 
-vim.keymap.set("n", "<leader>d", function()
+map("n", "<leader>d", function()
   require("snacks").picker.diagnostics_buffer()
 end)
 
-vim.keymap.set("n", "<leader>D", function()
+map("n", "<leader>D", function()
   require("snacks").picker.diagnostics()
 end)
 
-vim.keymap.set("n", "<leader>f", function()
+map("n", "<leader>f", function()
   require("snacks").picker.smart({
     multi = { "buffers", "files" }
   })
 end)
 
-vim.keymap.set("n", "<leader>h", function()
+map("n", "<leader>h", function()
   require("snacks").picker.help()
 end)
 
-vim.keymap.set("n", "<leader>H", function()
+map("n", "<leader>H", function()
   require("snacks").picker.highlights()
 end)
 
-vim.keymap.set("n", "<leader>/", function()
+map("n", "<leader>/", function()
   require("snacks").picker.grep()
 end)
 
-vim.keymap.set("n", "<leader>'", function()
+map("n", "<leader>'", function()
   require("snacks").picker.resume()
 end)
