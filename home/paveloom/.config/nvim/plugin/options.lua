@@ -24,6 +24,15 @@ vim.opt.linebreak = true
 -- Keep undo history
 vim.opt.undofile = true
 
+local function shadafile()
+  local root = vim.fs.root(0, ".git") or "main"
+  local shadafilename = string.gsub(root, "/", "%%") .. ".shada"
+  return vim.fs.joinpath(vim.fn.stdpath("state"), "shada", shadafilename)
+end
+
+-- Use per-project `shada` files
+vim.opt.shadafile = shadafile()
+
 -- Enable spell checking
 vim.opt.spell = true
 
