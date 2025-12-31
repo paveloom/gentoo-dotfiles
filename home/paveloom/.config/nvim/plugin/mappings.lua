@@ -31,11 +31,11 @@ map("n", "<C-q>", "<cmd>quit<cr>")
 -- Search for the word under the cursor with <C-f>
 map("n", "<C-f>", "*")
 
--- Change indentation using <Tab>
-map("n", "<S-Tab>", "<<")
-map("n", "<Tab>", ">>")
-map("v", "<S-Tab>", "<gv")
-map("v", "<Tab>", ">gv")
+-- Shift lines by one indent level always
+map("n", ">", ">>")
+map("n", "<", "<<")
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
 -- Navigate the jump list with <leader>q and <leader>e
 map("n", "<leader>q", "<C-o>")
