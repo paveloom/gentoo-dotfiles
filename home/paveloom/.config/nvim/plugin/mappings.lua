@@ -37,6 +37,9 @@ map("n", "<", "<<")
 map("v", "<", "<gv")
 map("v", ">", ">gv")
 
+-- Navigate to the alternate file with `<C-p>`
+map("n", "<C-p>", "<C-^>")
+
 -- Navigate the jump list with <leader>q and <leader>e
 map("n", "<leader>q", "<C-o>")
 map("n", "<leader>e", "<C-i>")
