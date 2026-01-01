@@ -8,5 +8,11 @@ require("gitsigns").setup({
     map("n", "]g", function()
       require("gitsigns").nav_hunk("next")
     end)
+    map("n", "gp", function()
+      require("gitsigns").preview_hunk()
+    end)
+    map("n", "gr", function()
+      require("gitsigns").reset_hunk()
+    end)
   end
 })
