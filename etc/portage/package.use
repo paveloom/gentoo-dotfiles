@@ -5,8 +5,8 @@ sys-kernel/installkernel dracut systemd-boot
 # required by pfl (argument)
 >=sys-apps/util-linux-2.40.4 caps
 
-# Quod Libet
-media-plugins/gst-plugins-meta opus modplug
+media-libs/gst-plugins-bad vaapi
+media-plugins/gst-plugins-meta ffmpeg modplug opus vaapi
 
 # audio
 media-video/pipewire extra sound-server v4l
