@@ -67,3 +67,9 @@ vim.diagnostic.config({
     }
   }
 })
+
+-- Set up the status line
+vim.opt.statusline =
+  "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %h%w%m%r" ..
+  "%=" ..
+  "%y   %{get(b:,'gitsigns_head','')}   %15.(%l,%c%V   %P%)"
