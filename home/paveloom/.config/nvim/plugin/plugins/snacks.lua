@@ -62,10 +62,14 @@ map("n", "<leader>H", function()
   require("snacks").picker.highlights()
 end)
 
+map("n", "<leader>'", function()
+  require("snacks").picker.resume()
+end)
+
 map("n", "<leader>/", function()
   require("snacks").picker.grep()
 end)
 
-map("n", "<leader>'", function()
-  require("snacks").picker.resume()
+map("n", "<leader>?", function()
+  require("snacks").picker.keymaps()
 end)
