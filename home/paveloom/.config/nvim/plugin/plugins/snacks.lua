@@ -34,42 +34,40 @@ require("snacks").setup({
   }
 })
 
-local map = vim.keymap.set
-
-map("n", "<leader>b", function()
+Map("n", "<leader>b", function()
   require("snacks").picker.buffers()
 end)
 
-map("n", "<leader>d", function()
+Map("n", "<leader>d", function()
   require("snacks").picker.diagnostics_buffer()
 end)
 
-map("n", "<leader>D", function()
+Map("n", "<leader>D", function()
   require("snacks").picker.diagnostics()
 end)
 
-map("n", "<leader>f", function()
+Map("n", "<leader>f", function()
   require("snacks").picker.smart({
     multi = { "buffers", "files" }
   })
 end)
 
-map("n", "<leader>h", function()
+Map("n", "<leader>h", function()
   require("snacks").picker.help()
 end)
 
-map("n", "<leader>H", function()
+Map("n", "<leader>H", function()
   require("snacks").picker.highlights()
 end)
 
-map("n", "<leader>'", function()
+Map("n", "<leader>'", function()
   require("snacks").picker.resume()
 end)
 
-map("n", "<leader>/", function()
+Map("n", "<leader>/", function()
   require("snacks").picker.grep()
 end)
 
-map("n", "<leader>?", function()
+Map("n", "<leader>?", function()
   require("snacks").picker.keymaps()
 end)

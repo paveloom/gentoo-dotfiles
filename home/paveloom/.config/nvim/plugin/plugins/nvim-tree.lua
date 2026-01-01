@@ -34,7 +34,7 @@ require("nvim-tree").setup({
 
     api.config.mappings.default_on_attach(buffer)
 
-    vim.keymap.set("n", "<Esc>", api.tree.close, opts("Close"))
+    Map("n", "<Esc>", api.tree.close, opts("Close"))
   end,
   diagnostics = {
     enable = true,
@@ -42,6 +42,6 @@ require("nvim-tree").setup({
   }
 })
 
-vim.keymap.set("n", "<leader>w", function()
+Map("n", "<leader>w", function()
   require("nvim-tree.api").tree.toggle({ find_file = true })
 end)
