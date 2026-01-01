@@ -40,10 +40,6 @@ map("v", ">", ">gv")
 -- Navigate to the alternate file with `<C-p>`
 map("n", "<C-p>", "<C-^>")
 
--- Navigate the jump list with <leader>q and <leader>e
-map("n", "<leader>q", "<C-o>")
-map("n", "<leader>e", "<C-i>")
-
 -- Change and delete into the black hole register
 map({ "n", "x" }, "c", "\"_c")
 map("n", "C", "\"_C")
