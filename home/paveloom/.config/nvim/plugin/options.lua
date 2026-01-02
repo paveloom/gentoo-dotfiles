@@ -73,3 +73,6 @@ vim.opt.statusline =
   "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %h%w%m%r" ..
   "%=" ..
   "%y   %{get(b:,'gitsigns_head','')}   %15.(%l,%c%V   %P%)"
+
+-- Set up the diff mode
+vim.opt.diffopt = "closeoff,context:5,horizontal,internal"
