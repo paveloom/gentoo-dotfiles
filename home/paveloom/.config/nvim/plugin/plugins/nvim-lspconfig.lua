@@ -1,6 +1,7 @@
 vim.lsp.enable("bashls")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
+vim.lsp.enable("marksman")
 
 local group = vim.api.nvim_create_augroup("config.lsp", {})
 
