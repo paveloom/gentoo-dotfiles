@@ -36,7 +36,6 @@ vim.api.nvim_create_autocmd("LspAttach", {
     map("n", "gR", vim.lsp.buf.rename)
     map("n", "ga", vim.lsp.buf.code_action)
     map("n", "gd", vim.lsp.buf.definition)
-    map("n", "gh", vim.lsp.buf.hover)
 
     map("n", "<leader>r", function()
       require("snacks").picker.lsp_references()
