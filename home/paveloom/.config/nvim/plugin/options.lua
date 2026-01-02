@@ -62,6 +62,8 @@ vim.diagnostic.config({
   }
 })
 
+-- Set up the status line
+
 -- TODO: replace with built-in `vim.diagnostic.status` when Neovim 0.12 comes out
 _G.diagnostic_status = function(bufnr)
   vim.validate("bufnr", bufnr, "number", true)
@@ -80,7 +82,14 @@ _G.diagnostic_status = function(bufnr)
   return result_str
 end
 
--- Set up the status line
+vim.api.nvim_create_autocmd("DiagnosticChanged", {
+  group = vim.api.nvim_create_augroup("nvim.diagnostic.status", {}),
+  callback = function(ev)
+    vim.api.nvim__redraw({ buf = ev.buf, statusline = true })
+  end,
+  desc = "diagnostics component for the statusline"
+})
+
 vim.opt.statusline =
   "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %{v:lua.diagnostic_status()} %h%w%m%r" ..
   "%=" ..
