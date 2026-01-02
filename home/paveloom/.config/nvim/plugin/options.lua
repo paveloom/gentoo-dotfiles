@@ -64,10 +64,7 @@ vim.diagnostic.config({
 
 -- Set up the status line
 
--- TODO: replace with built-in `vim.diagnostic.status` when Neovim 0.12 comes out
-_G.diagnostic_status = function(bufnr)
-  vim.validate("bufnr", bufnr, "number", true)
-  bufnr = bufnr or 0
+function DiagnosticStatus(bufnr)
   local counts = vim.diagnostic.count(bufnr)
   local config = vim.diagnostic.config() --[[@as vim.diagnostic.Opts]]
   local user_signs = vim.tbl_get(config, "signs", "text") or {}
@@ -91,9 +88,9 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
 })
 
 vim.opt.statusline =
-  "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %{v:lua.diagnostic_status()} %h%w%m%r" ..
+  "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %{v:lua.DiagnosticStatus(0)} %h%w%m%r" ..
   "%=" ..
-  "%y   %{get(b:,'gitsigns_head','')}   %15.(%l,%c%V   %P%)"
+  "%{v:lua.DiagnosticStatus()}   %y   %{get(b:,'gitsigns_head','')}   %15.(%l,%c%V   %P%)"
 
 -- Set up the diff mode
 vim.opt.diffopt = "closeoff,context:5,horizontal,internal"
