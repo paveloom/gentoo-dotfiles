@@ -88,9 +88,9 @@ vim.api.nvim_create_autocmd("DiagnosticChanged", {
 })
 
 vim.opt.statusline =
-  "%<%{expand('%:.')}   %-10.{get(b:,'gitsigns_status','')} %{v:lua.DiagnosticStatus(0)} %h%w%m%r" ..
+  "%<%{expand('%:.')} %h%w%m%r   %{get(b:,'gitsigns_status','')} %{v:lua.DiagnosticStatus(0)}" ..
   "%=" ..
-  "%{v:lua.DiagnosticStatus()}   %y   %{get(b:,'gitsigns_head','')}   %15.(%l,%c%V   %P%)"
+  "%{v:lua.DiagnosticStatus()}   %{get(b:,'gitsigns_head','')}   %y   %15.(%l,%c%V   %P%)"
 
 -- Set up the diff mode
 vim.opt.diffopt = "closeoff,context:5,horizontal,internal"
