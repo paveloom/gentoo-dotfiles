@@ -33,9 +33,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
       end)
     end
 
-    map("n", "gR", vim.lsp.buf.rename)
     map("n", "ga", vim.lsp.buf.code_action)
     map("n", "gd", vim.lsp.buf.definition)
+    map("n", "gi", vim.lsp.buf.implementation)
+    map("n", "gR", vim.lsp.buf.rename)
+    map("n", "gt", vim.lsp.buf.type_definition)
 
     map("n", "<leader>r", function()
       require("snacks").picker.lsp_references()
