@@ -54,21 +54,47 @@ local dark_3 = "#3d3846"
 local dark_4 = "#241f31"
 local dark_5 = "#000000"
 
+-- See the default Neovim theme reference at
+-- https://github.com/nshern/neovim-default-colorscheme-extras
+
+local dark_blue = "#004c63"
+local dark_cyan = "#007373"
+local dark_green = "#005523"
+local dark_magenta = "#470045"
+local dark_red = "#590008"
+local dark_yellow = "#6b5300"
+local light_blue = "#A6DBFF"
+local light_cyan = "#8cf8f7"
+local light_green = "#b4f6c0"
+local light_magenta = "#FFCAFF"
+local light_red = "#FFC0B9"
+local light_yellow = "#FCE094"
+local light_grey_1 = "#EEF1F8"
+local light_grey_2 = "#E0E2EA"
+local light_grey_3 = "#C4C6CD"
+local light_grey_4 = "#9b9ea4"
+local dark_grey_4 = "#4f5258"
+local dark_grey_3 = "#2c2e33"
+local dark_grey_2 = "#14161B"
+local dark_grey_1 = "#07080D"
+
 local function hi(name, val)
   vim.api.nvim_set_hl(0, name, val)
 end
 
-hi("CursorLine", { link = "Visual" })
-hi("LineNR", { fg = light_5 })
 hi("Normal", { bg = light_1, fg = dark_5 })
 hi("NormalFloat", { link = "Normal" })
+
+hi("CursorLine", { link = "Visual" })
+hi("LineNR", { fg = light_5 })
+hi("StatusLine", { bg = light_2 })
+hi("StatusLineNC", { bg = light_3 })
+hi("Visual", { bg = light_3 })
+
 hi("Pmenu", { link = "Normal" })
 hi("PmenuKind", { bg = "none" })
 hi("PmenuSel", { link = "Visual" })
 hi("PmenuThumb", { bg = light_5 })
-hi("StatusLine", { bg = light_2 })
-hi("StatusLineNC", { bg = light_3 })
-hi("Visual", { bg = light_3 })
 
 -- Tree-sitter's capture groups are described at
 -- https://github.com/nvim-treesitter/nvim-treesitter/blob/master/CONTRIBUTING.md
@@ -82,3 +108,7 @@ hi("NvimTreeFolderIcon", { fg = dark_1 })
 hi("SnacksPickerBufFlags", { link = "SnacksPickerFile" })
 hi("SnacksPickerCol", { link = "SnacksPickerFile" })
 hi("SnacksPickerDir", { link = "SnacksPickerFile" })
+
+hi("GitSignsAdd", { fg = light_green })
+hi("GitSignsChange", { fg = light_yellow })
+hi("GitSignsDelete", { fg = light_red })
