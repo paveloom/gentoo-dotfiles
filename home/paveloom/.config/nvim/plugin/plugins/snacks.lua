@@ -23,6 +23,14 @@ require("snacks").setup({
       }
     },
     sources = {
+      files = {
+        hidden = true,
+        matcher = {
+          cwd_bonus = true,
+          frecency = true,
+          sort_empty = true
+        }
+      },
       lsp_symbols = {
         sort = {
           fields = { "idx" }
@@ -54,9 +62,7 @@ Map("n", "<leader>D", function()
 end)
 
 Map("n", "<leader>f", function()
-  require("snacks").picker.smart({
-    multi = { "buffers", "files" }
-  })
+  require("snacks").picker.files()
 end)
 
 Map("n", "<leader>h", function()
