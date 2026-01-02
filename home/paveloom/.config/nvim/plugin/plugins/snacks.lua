@@ -22,6 +22,13 @@ require("snacks").setup({
         }
       }
     },
+    sources = {
+      lsp_symbols = {
+        sort = {
+          fields = { "idx" }
+        }
+      }
+    },
     win = {
       input = {
         keys = {
