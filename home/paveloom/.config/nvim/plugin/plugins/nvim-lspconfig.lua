@@ -1,31 +1,16 @@
+local lsp = require("config.lsp")
+
 vim.lsp.enable("bashls")
 vim.lsp.enable("clangd")
 vim.lsp.enable("lua_ls")
 vim.lsp.enable("marksman")
 
-local group = vim.api.nvim_create_augroup("config.lsp", {})
-
 vim.api.nvim_create_autocmd("LspAttach", {
-  group = group,
+  group = lsp.group,
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
     local map = require("config.mappings").map_buf(args.buf)
-
-    if
-      not client:supports_method("textDocument/willSaveWaitUntil")
-      and client:supports_method("textDocument/formatting")
-    then
-      vim.api.nvim_create_autocmd("BufWritePre", {
-        group = group,
-        buffer = args.buf,
-        callback = function()
-          vim.lsp.buf.format({
-            bufnr = args.buf, id = client.id, timeout_ms = 1000
-          })
-        end
-      })
-    end
 
     if client:supports_method("textDocument/inlayHint") then
       map("n", "<A-c>", function()
@@ -54,7 +39,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 })
 
 vim.api.nvim_create_autocmd("LspProgress", {
-  group = group,
+  group = lsp.group,
   callback = function()
     vim.notify(vim.lsp.status())
   end
