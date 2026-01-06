@@ -1,6 +1,6 @@
 require("gitsigns").setup({
   on_attach = function(bufnr)
-    local map = MapBuf(bufnr)
+    local map = require("config.mappings").map
 
     map("n", "[c", function()
       require("gitsigns").nav_hunk("prev")

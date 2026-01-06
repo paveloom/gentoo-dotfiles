@@ -10,7 +10,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
   callback = function(args)
     local client = assert(vim.lsp.get_client_by_id(args.data.client_id))
 
-    local map = MapBuf(args.buf)
+    local map = require("config.mappings").map_buf(args.buf)
 
     if
       not client:supports_method("textDocument/willSaveWaitUntil")

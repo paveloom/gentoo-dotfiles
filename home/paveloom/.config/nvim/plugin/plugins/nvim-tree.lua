@@ -1,3 +1,5 @@
+local map = require("config.mappings").map
+
 require("nvim-tree").setup({
   disable_netrw = true,
   view = {
@@ -34,7 +36,7 @@ require("nvim-tree").setup({
 
     api.config.mappings.default_on_attach(buffer)
 
-    Map("n", "<Esc>", api.tree.close, opts("Close"))
+    map("n", "<Esc>", api.tree.close, opts("Close"))
   end,
   diagnostics = {
     enable = true,
@@ -42,6 +44,6 @@ require("nvim-tree").setup({
   }
 })
 
-Map("n", "<leader>w", function()
+map("n", "<leader>w", function()
   require("nvim-tree.api").tree.toggle({ find_file = true })
 end)

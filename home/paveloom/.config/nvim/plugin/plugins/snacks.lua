@@ -1,3 +1,5 @@
+local map = require("config.mappings").map
+
 require("snacks").setup({
   picker = {
     hidden = true,
@@ -49,38 +51,38 @@ require("snacks").setup({
   }
 })
 
-Map("n", "<leader>b", function()
+map("n", "<leader>b", function()
   require("snacks").picker.buffers()
 end)
 
-Map("n", "<leader>d", function()
+map("n", "<leader>d", function()
   require("snacks").picker.diagnostics_buffer()
 end)
 
-Map("n", "<leader>D", function()
+map("n", "<leader>D", function()
   require("snacks").picker.diagnostics()
 end)
 
-Map("n", "<leader>f", function()
+map("n", "<leader>f", function()
   require("snacks").picker.files()
 end)
 
-Map("n", "<leader>h", function()
+map("n", "<leader>h", function()
   require("snacks").picker.help()
 end)
 
-Map("n", "<leader>H", function()
+map("n", "<leader>H", function()
   require("snacks").picker.highlights()
 end)
 
-Map("n", "<leader>'", function()
+map("n", "<leader>'", function()
   require("snacks").picker.resume()
 end)
 
-Map("n", "<leader>/", function()
+map("n", "<leader>/", function()
   require("snacks").picker.grep()
 end)
 
-Map("n", "<leader>?", function()
+map("n", "<leader>?", function()
   require("snacks").picker.keymaps()
 end)
