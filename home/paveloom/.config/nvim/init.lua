@@ -54,3 +54,6 @@ add({
   { source = "nvim-treesitter/nvim-treesitter", checkout = "v0.10.0" },
   { source = "saghen/blink.cmp",                checkout = "v1.8.0" }
 })
+
+-- Allow project-local configuration
+vim.opt.exrc = true
