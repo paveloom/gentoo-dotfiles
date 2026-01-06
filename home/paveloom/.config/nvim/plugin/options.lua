@@ -64,6 +64,7 @@ vim.diagnostic.config({
 
 -- Set up the status line
 
+-- TODO: replace with built-in `vim.diagnostic.status` when Neovim 0.12 comes out
 function DiagnosticStatus(bufnr)
   local counts = vim.diagnostic.count(bufnr)
   local config = vim.diagnostic.config() --[[@as vim.diagnostic.Opts]]
