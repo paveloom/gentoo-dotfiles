@@ -95,3 +95,10 @@ vim.opt.statusline =
 
 -- Set up the diff mode
 vim.opt.diffopt = "closeoff,context:5,horizontal,internal"
+
+-- Add filetype mappings
+vim.filetype.add({
+  filename = {
+    [".gersemirc"] = "yaml"
+  }
+})
