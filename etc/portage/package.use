@@ -148,6 +148,8 @@ media-libs/glycin-loaders heif
 
 app-text/papers djvu
 
+gnome-base/nautilus -previewer
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
