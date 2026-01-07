@@ -5,7 +5,8 @@ vim.lsp.enable({
   "clangd",
   "lua_ls",
   "marksman",
-  "neocmake"
+  "neocmake",
+  "yamlls"
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
