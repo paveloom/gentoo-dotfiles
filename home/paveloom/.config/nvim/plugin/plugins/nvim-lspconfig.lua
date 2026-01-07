@@ -1,9 +1,12 @@
 local lsp = require("config.lsp")
 
-vim.lsp.enable("bashls")
-vim.lsp.enable("clangd")
-vim.lsp.enable("lua_ls")
-vim.lsp.enable("marksman")
+vim.lsp.enable({
+  "bashls",
+  "clangd",
+  "lua_ls",
+  "marksman",
+  "neocmake"
+})
 
 vim.api.nvim_create_autocmd("LspAttach", {
   group = lsp.group,
