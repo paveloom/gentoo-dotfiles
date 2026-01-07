@@ -102,3 +102,6 @@ vim.filetype.add({
     [".gersemirc"] = "yaml"
   }
 })
+
+-- Treat `.h` files as C files by default
+vim.g.c_syntax_for_h = 1
