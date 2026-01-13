@@ -63,7 +63,8 @@ symlink_regular_files() {
 main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
 
-    symlink_directories "$ROOT/etc"
+    symlink_directories "$ROOT/etc" ! -name "systemd"
+    symlink_directories "$ROOT/etc/systemd/system"
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/usr/share/i18n/locales"
 
