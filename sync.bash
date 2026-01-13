@@ -47,17 +47,17 @@ symlink_by_type() {
 
     while read -r input_file; do
         symlink_file "$input_file"
-    done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type")
+    done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type" "${@:3}")
 }
 
 symlink_directories() {
     local top_dir="$1"
-    symlink_by_type "$top_dir" "d"
+    symlink_by_type "$top_dir" "d" "${@:2}"
 }
 
 symlink_regular_files() {
     local top_dir="$1"
-    symlink_by_type "$top_dir" "f"
+    symlink_by_type "$top_dir" "f" "${@:2}"
 }
 
 main() {
