@@ -4,7 +4,6 @@ vim.lsp.enable({
   "bashls",
   "clangd",
   "lua_ls",
-  "marksman",
   "neocmake",
   "rust_analyzer",
   "yamlls"
