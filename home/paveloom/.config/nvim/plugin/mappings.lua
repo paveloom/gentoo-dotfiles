@@ -63,3 +63,8 @@ map("n", "<A-v>", function()
 
   vim.diagnostic.config({ virtual_lines = false, virtual_text = true })
 end)
+
+-- Toggle line wrapping
+map("n", "<A-w>", function()
+  vim.o.wrap = not vim.o.wrap
+end)
