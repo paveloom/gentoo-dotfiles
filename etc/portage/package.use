@@ -150,6 +150,8 @@ app-text/papers djvu
 
 gnome-base/nautilus -previewer
 
+media-sound/quodlibet gstreamer
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
