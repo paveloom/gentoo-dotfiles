@@ -152,6 +152,9 @@ gnome-base/nautilus -previewer
 
 media-sound/quodlibet gstreamer
 
+sys-libs/libnbd ocaml
+sys-block/nbdkit curl nbd python libssh
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
