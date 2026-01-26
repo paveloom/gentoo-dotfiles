@@ -47,6 +47,7 @@ add({
   { source = "Darazaki/indent-o-matic",                     checkout = "764da1f" },
   { source = "folke/snacks.nvim",                           checkout = "v2.30.0" },
   { source = "j-hui/fidget.nvim",                           checkout = "v1.6.1" },
+  { source = "kylechui/nvim-surround",                      checkout = "v3.1.8" },
   { source = "lewis6991/gitsigns.nvim",                     checkout = "v1.0.2" },
   { source = "linrongbin16/gitlinker.nvim",                 checkout = "v5.3.0" },
   { source = "neovim/nvim-lspconfig",                       checkout = "v2.5.0" },
