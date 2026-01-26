@@ -39,6 +39,7 @@ end
 hi("Normal", { bg = shade_7, fg = shade_0 })
 hi("NormalFloat", { link = "Normal" })
 
+hi("ColorColumn", { link = "Visual" })
 hi("CursorLine", { link = "Visual" })
 hi("LineNR", { fg = shade_2 })
 hi("StatusLine", { bg = shade_6 })
