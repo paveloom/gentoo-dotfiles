@@ -1,1 +1,3 @@
+LESS="-R -M -i"
+LESSCOLORIZER="pygmentize -f 256"
 SYSTEMD_LESS="-R -M -i"
