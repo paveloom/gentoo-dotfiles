@@ -44,6 +44,13 @@ require("nvim-tree").setup({
   },
   filters = {
     git_ignored = false
+  },
+  actions = {
+    open_file = {
+      window_picker = {
+        enable = false
+      }
+    }
   }
 })
 
