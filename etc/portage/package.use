@@ -157,6 +157,8 @@ sys-block/nbdkit curl nbd python libssh
 
 app-emulation/libvirt virtiofsd
 
+sys-libs/zlib abi_x86_32 minizip
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
