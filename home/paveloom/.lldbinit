@@ -1,0 +1,5 @@
+# This a workaround for stepping into functions
+# from shared objects built with GCC
+#
+# See https://github.com/llvm/llvm-project/issues/80438
+settings set target.process.thread.step-in-avoid-nodebug false
