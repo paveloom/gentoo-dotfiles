@@ -159,6 +159,14 @@ app-emulation/libvirt virtiofsd
 
 sys-libs/zlib abi_x86_32 minizip
 
+# Required to enable support for compressing debug symbols via Zstd
+#
+# See https://wiki.gentoo.org/wiki/Zstd#Debug_symbols
+dev-debug/gdb zstd
+dev-libs/elfutils zstd
+llvm-core/llvm zstd
+sys-devel/binutils zstd
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
