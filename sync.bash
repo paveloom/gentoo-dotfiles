@@ -67,6 +67,7 @@ main() {
     symlink_directories "$ROOT/etc/systemd/system"
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/etc/env.d"
+    symlink_regular_files "$ROOT/etc/systemd/system"
     symlink_regular_files "$ROOT/usr/share/i18n/locales"
 
     symlink_regular_files "$ROOT/home/paveloom"

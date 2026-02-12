@@ -1,0 +1,9 @@
+[Unit]
+Description=Renew Let's Encrypt certificates using acme.sh
+After=network-online.target nss-lookup.target
+
+[Service]
+Type=oneshot
+User=acme
+Group=acme
+ExecStart=/usr/bin/acme.sh --cron --home /etc/acme-sh
