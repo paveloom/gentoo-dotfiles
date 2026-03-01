@@ -16,6 +16,7 @@ media-sound/pulseaudio -daemon
 app-admin/keepassxc browser
 
 # Vivaldi
+media-video/ffmpeg chromium
 media-video/ffmpeg-chromium vaapi
 www-client/vivaldi proprietary-codecs widevine
 
@@ -144,7 +145,7 @@ media-libs/gd fontconfig
 dev-lang/luajit lua52compat
 
 media-gfx/loupe heif
-media-libs/glycin-loaders heif
+media-libs/glycin-loaders heif libs
 
 app-text/papers djvu
 
@@ -167,6 +168,9 @@ dev-libs/elfutils zstd
 llvm-core/llvm zstd
 sys-devel/binutils zstd
 
+# Samba
+net-libs/ngtcp2 gnutls
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
@@ -176,11 +180,14 @@ dev-libs/elfutils abi_x86_32
 dev-libs/expat abi_x86_32
 dev-libs/glib abi_x86_32
 dev-libs/icu abi_x86_32
+dev-libs/json-c abi_x86_32
 dev-libs/libffi abi_x86_32
 dev-libs/libgcrypt abi_x86_32
 dev-libs/libgpg-error abi_x86_32
 dev-libs/libpcre2 abi_x86_32
+dev-libs/libunistring abi_x86_32
 dev-libs/libxml2 abi_x86_32
+dev-libs/openssl abi_x86_32
 dev-libs/wayland abi_x86_32
 dev-util/spirv-tools abi_x86_32
 dev-util/sysprof-capture abi_x86_32
@@ -203,7 +210,13 @@ media-libs/opus abi_x86_32
 media-libs/vulkan-loader abi_x86_32
 media-sound/lame abi_x86_32
 media-sound/mpg123-base abi_x86_32
+net-dns/c-ares abi_x86_32
+net-dns/libidn2 abi_x86_32
 net-libs/libasyncns abi_x86_32
+net-libs/libpsl abi_x86_32
+net-libs/nghttp2 abi_x86_32
+net-libs/nghttp3 abi_x86_32
+net-misc/curl abi_x86_32
 sys-apps/dbus abi_x86_32
 sys-apps/systemd abi_x86_32
 sys-apps/util-linux abi_x86_32
