@@ -44,19 +44,11 @@ games-emulation/RetroArch network pipewire
 # Audacious
 media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 
-# required by app-containers/incus-6.11::gentoo
-# required by incus (argument)
->=dev-libs/raft-0.22.1 lz4
-# required by app-containers/incus-6.11::gentoo
-# required by incus (argument)
->=dev-util/xdelta-3.0.11-r1 lzma
-# required by app-containers/incus-6.11::gentoo
-# required by incus (argument)
->=sys-fs/squashfs-tools-4.6.1 lzma
-# required by app-containers/lxc-6.0.4::gentoo[caps,tools]
-# required by app-containers/incus-6.11::gentoo
-# required by incus (argument)
->=sys-libs/libcap-2.71 static-libs
+# Incus
+dev-libs/raft lz4
+dev-util/xdelta lzma
+sys-fs/squashfs-tools lzma
+sys-libs/libcap static-libs
 
 # nftables
 net-firewall/iptables nftables
