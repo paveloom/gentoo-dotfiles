@@ -47,6 +47,7 @@ media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 # Incus
 dev-libs/raft lz4
 dev-util/xdelta lzma
+net-firewall/nftables json
 sys-fs/squashfs-tools lzma
 sys-libs/libcap static-libs
 
