@@ -58,10 +58,8 @@ media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 # required by incus (argument)
 >=sys-libs/libcap-2.71 static-libs
 
-# required by app-containers/containers-common-0.63.0::gentoo
-# required by app-containers/skopeo-1.18.0-r1::gentoo
-# required by skopeo (argument)
->=net-firewall/iptables-1.8.11-r1 nftables
+# nftables
+net-firewall/iptables nftables
 
 # required by net-news/newsflash-3.3.5::guru
 # required by newsflash (argument)
