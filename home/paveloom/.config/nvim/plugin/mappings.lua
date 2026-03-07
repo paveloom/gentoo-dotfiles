@@ -45,6 +45,7 @@ map({ "n", "x" }, "c", "\"_c")
 map("n", "C", "\"_C")
 map({ "n", "x" }, "d", "\"_d")
 map("n", "D", "\"_D")
+map({ "n", "x" }, "s", "\"_s")
 map("x", "p", "pgvy")
 
 -- Switch between modes of viewing diagnostics with <A-v>
