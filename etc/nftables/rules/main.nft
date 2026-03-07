@@ -1,0 +1,19 @@
+#!/usr/sbin/nft -f
+
+table inet firewall {
+    chain input {
+        type filter hook input priority filter - 5; policy drop;
+
+        ct state established,related accept
+        ct state invalid drop
+
+        ip protocol icmp accept
+        meta l4proto ipv6-icmp accept
+
+        iif lo accept
+        iifname incusbr* accept
+        iifname virbr* accept
+
+        ip saddr 192.168.0.0/24 tcp dport 4918 accept
+    }
+}

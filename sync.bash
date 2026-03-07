@@ -78,8 +78,10 @@ symlink_regular_files() {
 main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
 
-    symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "systemd"
+    symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
     symlink_directories "$ROOT/etc/systemd/system"
+    copy_file "$ROOT/etc/nftables"
+
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/etc/env.d"
     symlink_regular_files "$ROOT/etc/systemd/system"
