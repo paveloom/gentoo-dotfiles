@@ -15,5 +15,6 @@ table inet firewall {
         iifname virbr* accept
 
         ip saddr 192.168.0.0/24 tcp dport 4918 accept
+        iifname awg0 meta l4proto {tcp, udp} th dport 60553 accept
     }
 }
