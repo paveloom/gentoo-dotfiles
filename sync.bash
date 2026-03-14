@@ -3,21 +3,6 @@
 PREFIX="/"
 ROOT="$(realpath -e "$0" | xargs dirname)"
 
-copy() {
-    local input_file="$1"
-
-    local output_file
-    output_file="$PREFIX$(realpath -s --relative-to "$ROOT" "$input_file")"
-
-    if [[ ! -w "$(dirname "$output_file")" ]]; then
-        sudo cp -rTf "$input_file" "$output_file"
-    else
-        cp -rTf "$input_file" "$output_file"
-    fi
-
-    echo "$output_file #-> $input_file"
-}
-
 # Usage: symlink FILE [OPTION]... [FIND_OPTIONS]...
 #
 # Options:
