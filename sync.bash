@@ -3,7 +3,7 @@
 PREFIX="/"
 ROOT="$(realpath -e "$0" | xargs dirname)"
 
-copy_file() {
+copy() {
     local input_file="$1"
 
     local output_file
@@ -18,7 +18,7 @@ copy_file() {
     echo "$output_file #-> $input_file"
 }
 
-symlink_file() {
+symlink() {
     local input_file="$1"
 
     local output_file
@@ -61,7 +61,7 @@ symlink_by_type() {
     local type="$2"
 
     while read -r input_file; do
-        symlink_file "$input_file"
+        symlink "$input_file"
     done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type" "${@:3}")
 }
 
@@ -81,8 +81,8 @@ main() {
 
     symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
     symlink_directories "$ROOT/etc/systemd/system"
-    symlink_file "$ROOT/etc/systemd/system.conf.d/"
-    symlink_file "$ROOT/etc/nftables"
+    symlink "$ROOT/etc/systemd/system.conf.d/"
+    symlink "$ROOT/etc/nftables"
 
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/etc/env.d"
