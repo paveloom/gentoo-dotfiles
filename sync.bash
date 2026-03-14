@@ -44,6 +44,10 @@ symlink() {
         return
     fi
 
+    if [[ ${input_file:0:1} != / ]]; then
+        input_file="$ROOT/$input_file"
+    fi
+
     local output_file
     output_file="$PREFIX$(realpath -s --relative-to "$ROOT" "$input_file")"
 
@@ -102,20 +106,20 @@ main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
     sudo -v || exit
 
-    symlink "$ROOT/etc/bash"
-    symlink "$ROOT/etc/env.d" -f
-    symlink "$ROOT/etc/fish"
-    symlink "$ROOT/etc/nftables"
-    symlink "$ROOT/etc/portage"
-    symlink "$ROOT/etc/ripgrep"
-    symlink "$ROOT/etc/speech-dispatcher"
-    symlink "$ROOT/etc/systemd/system" -d -f
-    symlink "$ROOT/etc/systemd/system.conf.d/"
-    symlink "$ROOT/etc/vim"
-    symlink "$ROOT/home/paveloom" -f
-    symlink "$ROOT/home/paveloom/.config" -d
-    symlink "$ROOT/root/.config" -d
-    symlink "$ROOT/usr/share/i18n/locales" -f
+    symlink "etc/bash"
+    symlink "etc/env.d" -f
+    symlink "etc/fish"
+    symlink "etc/nftables"
+    symlink "etc/portage"
+    symlink "etc/ripgrep"
+    symlink "etc/speech-dispatcher"
+    symlink "etc/systemd/system" -d -f
+    symlink "etc/systemd/system.conf.d/"
+    symlink "etc/vim"
+    symlink "home/paveloom" -f
+    symlink "home/paveloom/.config" -d
+    symlink "root/.config" -d
+    symlink "usr/share/i18n/locales" -f
 }
 
 main
