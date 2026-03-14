@@ -110,6 +110,7 @@ main() {
     symlink "etc/env.d" -f
     symlink "etc/fish"
     symlink "etc/nftables"
+    symlink "etc/nginx/conf.d"
     symlink "etc/portage"
     symlink "etc/ripgrep"
     symlink "etc/speech-dispatcher"
