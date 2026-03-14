@@ -77,6 +77,7 @@ symlink_regular_files() {
 
 main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
+    sudo -v || exit
 
     symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
     symlink_directories "$ROOT/etc/systemd/system"
