@@ -102,17 +102,20 @@ main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
     sudo -v || exit
 
-    symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
+    symlink "$ROOT/etc/bash"
+    symlink "$ROOT/etc/env.d" -f
+    symlink "$ROOT/etc/fish"
+    symlink "$ROOT/etc/nftables"
+    symlink "$ROOT/etc/portage"
+    symlink "$ROOT/etc/ripgrep"
+    symlink "$ROOT/etc/speech-dispatcher"
     symlink "$ROOT/etc/systemd/system" -d -f
     symlink "$ROOT/etc/systemd/system.conf.d/"
-    symlink "$ROOT/etc/nftables"
-
-    symlink_directories "$ROOT/root/.config"
-    symlink_regular_files "$ROOT/etc/env.d"
-    symlink_regular_files "$ROOT/usr/share/i18n/locales"
-
-    symlink_regular_files "$ROOT/home/paveloom"
-    symlink_directories "$ROOT/home/paveloom/.config"
+    symlink "$ROOT/etc/vim"
+    symlink "$ROOT/home/paveloom" -f
+    symlink "$ROOT/home/paveloom/.config" -d
+    symlink "$ROOT/root/.config" -d
+    symlink "$ROOT/usr/share/i18n/locales" -f
 }
 
 main
