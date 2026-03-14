@@ -81,7 +81,7 @@ main() {
     symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
     symlink_directories "$ROOT/etc/systemd/system"
     symlink_file "$ROOT/etc/systemd/system.conf.d/"
-    copy_file "$ROOT/etc/nftables"
+    symlink_file "$ROOT/etc/nftables"
 
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/etc/env.d"
