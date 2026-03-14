@@ -3,7 +3,7 @@
 PREFIX="/"
 ROOT="$(realpath -e "$0" | xargs dirname)"
 
-# Usage: symlink FILE [OPTION]... [FIND_OPTIONS]...
+# Usage: symlink FILE [OPTION]...
 #
 # Options:
 #     -d   Symlink directories under this directory
@@ -89,17 +89,17 @@ symlink_by_type() {
 
     while read -r input_file; do
         symlink "$input_file"
-    done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type" "${@:3}")
+    done < <(find -L "$top_dir" -mindepth 1 -maxdepth 1 -type "$type")
 }
 
 symlink_directories() {
     local top_dir="$1"
-    symlink_by_type "$top_dir" "d" "${@:2}"
+    symlink_by_type "$top_dir" "d"
 }
 
 symlink_regular_files() {
     local top_dir="$1"
-    symlink_by_type "$top_dir" "f" "${@:2}"
+    symlink_by_type "$top_dir" "f"
 }
 
 main() {
