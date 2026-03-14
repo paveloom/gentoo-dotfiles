@@ -18,8 +18,46 @@ copy() {
     echo "$output_file #-> $input_file"
 }
 
+# Usage: symlink FILE [OPTION]... [FIND_OPTIONS]...
+#
+# Options:
+#     -d   Symlink directories under this directory
+#     -f   Symlink regular files under this directory
+#
+# Using either of these options disables the default
+# behaviour of symlinking the passed file itself.
 symlink() {
     local input_file="$1"
+
+    local option_symlink_directories=false
+    local option_symlink_regular_files=false
+
+    for arg in "$@"; do
+        shift
+        case "$arg" in
+        "-d")
+            set -- "$@"
+            option_symlink_directories=true
+            ;;
+        "-f")
+            set -- "$@"
+            option_symlink_regular_files=true
+            ;;
+        *) set -- "$@" "$arg" ;;
+        esac
+    done
+
+    if $option_symlink_directories; then
+        symlink_directories "$@"
+    fi
+
+    if $option_symlink_regular_files; then
+        symlink_regular_files "$@"
+    fi
+
+    if $option_symlink_directories || $option_symlink_regular_files; then
+        return
+    fi
 
     local output_file
     output_file="$PREFIX$(realpath -s --relative-to "$ROOT" "$input_file")"
@@ -80,13 +118,12 @@ main() {
     sudo -v || exit
 
     symlink_directories "$ROOT/etc" ! -name "env.d" ! -name "nftables" ! -name "systemd"
-    symlink_directories "$ROOT/etc/systemd/system"
+    symlink "$ROOT/etc/systemd/system" -d -f
     symlink "$ROOT/etc/systemd/system.conf.d/"
     symlink "$ROOT/etc/nftables"
 
     symlink_directories "$ROOT/root/.config"
     symlink_regular_files "$ROOT/etc/env.d"
-    symlink_regular_files "$ROOT/etc/systemd/system"
     symlink_regular_files "$ROOT/usr/share/i18n/locales"
 
     symlink_regular_files "$ROOT/home/paveloom"
