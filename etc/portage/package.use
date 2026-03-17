@@ -63,7 +63,7 @@ x11-libs/libdrm video_cards_radeon
 gnome-base/gnome-keyring -ssh-agent
 app-admin/keepassxc -keyring -ssh-agent
 
-net-p2p/qbittorrent -dbus -gui webui
+net-p2p/qbittorrent webui
 
 # required by dev-util/bash-language-server-5.4.3::guru
 # required by bash-language-server (argument)
