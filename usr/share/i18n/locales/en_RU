@@ -87,9 +87,9 @@ mon	"January";/
 	"November";/
 	"December"
 
-d_t_fmt    "%a %d %b %Y %r %Z" % date +%c
+d_t_fmt    "%a %d %b %Y %T %Z" % date +%c
 d_fmt      "%m//%d//%Y"        % date +%x
-t_fmt      "%r"                % date +%X
+t_fmt      "%T"                % date +%X
 am_pm      "";""
 t_fmt_ampm ""                  % date +%r
 
