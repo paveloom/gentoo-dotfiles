@@ -3,10 +3,12 @@ local lsp = require("config.lsp")
 vim.lsp.enable({
   "bashls",
   "clangd",
+  "eslint",
   "gopls",
   "lua_ls",
   "neocmake",
   "rust_analyzer",
+  "ts_ls",
   "yamlls"
 })
 
