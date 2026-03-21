@@ -7,8 +7,7 @@ table inet firewall {
         ct state established,related accept
         ct state invalid drop
 
-        ip protocol icmp accept
-        meta l4proto ipv6-icmp accept
+        meta l4proto { icmp, ipv6-icmp } accept
 
         iif lo accept
         iifname incusbr* accept
