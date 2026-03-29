@@ -1,6 +1,9 @@
 -- Set the color scheme
 vim.cmd.colorscheme("custom")
 
+-- Split to the right by default
+vim.opt.splitright = true
+
 -- Show line numbers
 vim.opt.number = true
 
