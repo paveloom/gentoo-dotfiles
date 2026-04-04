@@ -1,0 +1,25 @@
+From 00f232b1bdb0799b845f98c6c4fb8df6bff224fc Mon Sep 17 00:00:00 2001
+From: Luca Boccassi <luca.boccassi@gmail.com>
+Date: Fri, 3 Apr 2026 15:21:53 +0100
+Subject: [PATCH] Fix build with -fno-semantic-interposition
+
+Fixes https://github.com/systemd/systemd/issues/41494
+
+Follow-up for 44cc82bfbf160bba2562bec08ffacbd587771210
+---
+ src/shared/mount-util.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/shared/mount-util.c b/src/shared/mount-util.c
+index 02f63f802a4a8..f7bba5d080c85 100644
+--- a/src/shared/mount-util.c
++++ b/src/shared/mount-util.c
+@@ -2067,7 +2067,7 @@ int make_fsmount(
+ 
+                 r = extract_first_word(&p, &word, ",", EXTRACT_KEEP_QUOTE);
+                 if (r < 0)
+-                        return log_full_errno(error_log_level, r, "Failed to parse mount option string \"%s\": %m", o);
++                        return log_full_errno(error_log_level, r, "Failed to parse mount option string \"%s\": %m", strempty(o));
+                 if (r == 0)
+                         break;
+ 
