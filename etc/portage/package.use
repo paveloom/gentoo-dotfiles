@@ -162,6 +162,9 @@ sys-devel/binutils zstd
 # Samba
 net-libs/ngtcp2 gnutls
 
+# FlareSolverr
+x11-base/xorg-server xvfb
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
