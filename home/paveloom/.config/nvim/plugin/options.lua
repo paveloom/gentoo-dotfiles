@@ -67,7 +67,10 @@ vim.diagnostic.config({
 
 -- Set up the status line
 
--- TODO: replace with built-in `vim.diagnostic.status` when Neovim 0.12 comes out
+-- TODO: replace with built-in `vim.diagnostic.status` when support for
+-- workspace diagnostics is added [1]
+--
+-- [1] https://github.com/neovim/neovim/issues/35152
 function DiagnosticStatus(bufnr)
   local counts = vim.diagnostic.count(bufnr)
   local config = vim.diagnostic.config() --[[@as vim.diagnostic.Opts]]
@@ -82,14 +85,6 @@ function DiagnosticStatus(bufnr)
 
   return result_str
 end
-
-vim.api.nvim_create_autocmd("DiagnosticChanged", {
-  group = vim.api.nvim_create_augroup("nvim.diagnostic.status", {}),
-  callback = function(ev)
-    vim.api.nvim__redraw({ buf = ev.buf, statusline = true })
-  end,
-  desc = "diagnostics component for the statusline"
-})
 
 vim.opt.statusline =
   "%<%{expand('%:.')} %h%w%m%r   %{get(b:,'gitsigns_status','')} %{v:lua.DiagnosticStatus(0)}" ..
