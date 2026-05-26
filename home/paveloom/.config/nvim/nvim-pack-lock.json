@@ -1,0 +1,69 @@
+{
+  "plugins": {
+    "blink.cmp": {
+      "rev": "78336bc89ee5365633bcf754d93df01678b5c08f",
+      "src": "https://github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "fidget.nvim": {
+      "rev": "b61e8af9b8b68ee0ec7da5fb7a8c203aae854f2e",
+      "src": "https://github.com/j-hui/fidget.nvim",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "gitlinker.nvim": {
+      "rev": "d991b0fc12551227ab345e428696092ff2d117fc",
+      "src": "https://github.com/linrongbin16/gitlinker.nvim",
+      "version": "5.0.0 - 6.0.0"
+    },
+    "gitsigns.nvim": {
+      "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
+      "src": "https://github.com/lewis6991/gitsigns.nvim",
+      "version": "2.0.0 - 3.0.0"
+    },
+    "indent-o-matic": {
+      "rev": "764da1f30b5bb4a49035c3abc9a586322296b812",
+      "src": "https://github.com/Darazaki/indent-o-matic",
+      "version": "'764da1f'"
+    },
+    "mini.hipatterns": {
+      "rev": "add8d8abad602787377ec5d81f6b248605828e0f",
+      "src": "https://github.com/nvim-mini/mini.hipatterns",
+      "version": "0.17.0 - 0.18.0"
+    },
+    "nvim-lspconfig": {
+      "rev": "f6738ef65dabade340b473d4ff2a1ad3352c10e7",
+      "src": "https://github.com/neovim/nvim-lspconfig",
+      "version": "2.0.0 - 3.0.0"
+    },
+    "nvim-surround": {
+      "rev": "2e93e154de9ff326def6480a4358bfc149d5da2c",
+      "src": "https://github.com/kylechui/nvim-surround",
+      "version": "4.0.0 - 5.0.0"
+    },
+    "nvim-tree.lua": {
+      "rev": "85d1145ac71c1b8e1423862c78165a1f609faf60",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "nvim-treesitter": {
+      "rev": "4916d6592ede8c07973490d9322f187e07dfefac",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter",
+      "version": "'4916d65'"
+    },
+    "nvim-treesitter-textobjects": {
+      "rev": "851e865342e5a4cb1ae23d31caf6e991e1c99f1e",
+      "src": "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
+      "version": "'851e865'"
+    },
+    "nvim-web-devicons": {
+      "rev": "5b9067899ee6a2538891573500e8fd6ff008440f",
+      "src": "https://github.com/nvim-tree/nvim-web-devicons",
+      "version": "0.100.0 - 0.101.0"
+    },
+    "snacks.nvim": {
+      "rev": "e6fd58c82f2f3fcddd3fe81703d47d6d48fc7b9f",
+      "src": "https://github.com/folke/snacks.nvim",
+      "version": "2.0.0 - 3.0.0"
+    }
+  }
+}
