@@ -1,14 +1,3 @@
----@diagnostic disable: missing-fields
-require("nvim-treesitter.configs").setup({
-  auto_install = true,
-  highlight = {
-    enable = true
-  },
-  indent = {
-    enable = true
-  }
-})
-
 require("nvim-treesitter-textobjects").setup({
   select = {
     lookahead = true
