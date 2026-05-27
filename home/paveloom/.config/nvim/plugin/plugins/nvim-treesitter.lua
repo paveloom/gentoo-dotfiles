@@ -15,7 +15,9 @@ vim.api.nvim_create_autocmd("FileType", {
 
       if vim.tbl_contains(langs, lang) then
         require("nvim-treesitter").install({ lang }):await(function()
-          vim.treesitter.start(bufnr)
+          if vim.api.nvim_buf_is_valid(bufnr) then
+            vim.treesitter.start(bufnr)
+          end
         end)
       end
     end)
