@@ -1,3 +1,9 @@
+vim.api.nvim_create_autocmd("FileType", {
+  callback = function(_)
+    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()"
+  end
+})
+
 require("nvim-treesitter-textobjects").setup({
   select = {
     lookahead = true
