@@ -40,10 +40,6 @@ vim.pack.add({
     version = vim.version.range("v0.100")
   },
   {
-    src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    version = "4916d65"
-  },
-  {
     src = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects",
     version = "851e865"
   },
