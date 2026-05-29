@@ -96,6 +96,10 @@ vim.opt.diffopt = "closeoff,context:5,horizontal,internal"
 
 -- Add filetype mappings
 vim.filetype.add({
+  extension = {
+    ebuild = "bash",
+    eclass = "bash"
+  },
   filename = {
     [".gersemirc"] = "yaml"
   }
