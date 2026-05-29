@@ -21,6 +21,7 @@ local function register(lang, filetype)
 end
 
 local filetypes = {
+  bash = { "bash" },
   cmake = { "cmake" }
 }
 
