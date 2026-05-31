@@ -25,6 +25,7 @@ end
 local filetypes = {
   bash = { "bash" },
   cmake = { "cmake" },
+  cpp = { "cpp" },
   markdown_inline = { "markdown" }
 }
 
