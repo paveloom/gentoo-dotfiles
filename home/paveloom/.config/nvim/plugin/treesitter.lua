@@ -24,7 +24,8 @@ end
 
 local filetypes = {
   bash = { "bash" },
-  cmake = { "cmake" }
+  cmake = { "cmake" },
+  markdown_inline = { "markdown" }
 }
 
 for lang, ft in pairs(filetypes) do
