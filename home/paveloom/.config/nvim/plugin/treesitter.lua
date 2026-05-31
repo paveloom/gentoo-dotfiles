@@ -1,5 +1,5 @@
--- Look up queries there
-vim.opt.runtimepath:prepend("/usr/share/tree-sitter")
+-- Look up queries in the system last
+vim.opt.runtimepath:append("/usr/share/tree-sitter")
 
 --- @param lang string Name of parser
 --- @param filetype string|string[] Filetype(s) to associate with lang
