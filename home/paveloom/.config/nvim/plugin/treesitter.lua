@@ -26,6 +26,7 @@ local filetypes = {
   bash = { "bash" },
   cmake = { "cmake" },
   cpp = { "cpp" },
+  json = { "json" },
   markdown_inline = { "markdown" }
 }
 
