@@ -65,7 +65,8 @@ vim.diagnostic.config({
   }
 })
 
--- Set up the status line
+-- Show the status line for the currently active file only
+vim.opt.laststatus = 3
 
 -- TODO: replace with built-in `vim.diagnostic.status` when support for
 -- workspace diagnostics is added [1]
