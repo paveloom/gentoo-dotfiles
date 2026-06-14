@@ -46,7 +46,9 @@ map("n", "C", "\"_C")
 map({ "n", "x" }, "d", "\"_d")
 map("n", "D", "\"_D")
 map({ "n", "x" }, "s", "\"_s")
-map("x", "p", "pgvy")
+
+-- Don't copy the replaced text when pasting in the Visual mode
+map("x", "p", "P")
 
 -- Switch between modes of viewing diagnostics with <A-v>
 map("n", "<A-v>", function()
