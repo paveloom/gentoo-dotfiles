@@ -52,6 +52,9 @@ vim.opt.smartcase = true
 -- Use the system clipboard for all yank, delete, and put operations
 vim.opt.clipboard = "unnamedplus"
 
+-- Prefer vertical splits by default
+vim.opt.switchbuf:append("vsplit")
+
 -- Always show the sign column
 vim.opt.signcolumn = "yes"
 
