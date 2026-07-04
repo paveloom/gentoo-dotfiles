@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<labwc_config>
+  <keyboard>
+    <default/>
+    <!-- The W- prefix refers to the Super key -->
+    <keybind key="Super_L" onRelease="true">
+      <action name="Execute" command="fuzzel"/>
+    </keybind>
+  </keyboard>
+  <libinput>
+    <device category="touchpad">
+      <naturalScroll>yes</naturalScroll>
+    </device>
+  </libinput>
+  <theme>
+    <font place="ActiveWindow">
+      <name>monospace</name>
+      <size>12</size>
+      <weight>bold</weight>
+    </font>
+    <font place="InactiveWindow">
+      <name>monospace</name>
+      <size>12</size>
+    </font>
+    <name>Adwaita</name>
+    <icon>Adwaita</icon>
+  </theme>
+  <windowRules>
+    <windowRule identifier="foot" event="onMap">
+      <action name="Maximize" direction="both"/>
+    </windowRule>
+  </windowRules>
+</labwc_config>
