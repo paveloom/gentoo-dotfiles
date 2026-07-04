@@ -166,6 +166,7 @@ net-libs/ngtcp2 gnutls
 x11-base/xorg-server xvfb
 
 gui-wm/labwc icons
+gui-wm/sway tray
 
 # Steam
 app-arch/bzip2 abi_x86_32
