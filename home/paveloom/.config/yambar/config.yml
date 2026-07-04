@@ -1,0 +1,57 @@
+poll-interval: &poll-interval 1000
+
+bar:
+  height: 30
+  location: top
+  spacing: 5
+  margin: 7
+
+  font: "JetBrainsMonoNL Nerd Font:style=Bold:pixelsize=16"
+
+  foreground: ffffffff
+  background: 111111FF
+
+  left:
+    - cpu:
+        poll-interval: *poll-interval
+        content:
+          map:
+            conditions:
+              id == -1:
+                - string: {text: "CPU: {cpu:3}%"}
+    - mem:
+        poll-interval: *poll-interval
+        content:
+          string: {text: "MEM: {percent_used:3}%"}
+    - network:
+        poll-interval: *poll-interval
+        content:
+          map:
+            conditions:
+              name == wlo1:
+                string: {text: "DL: {dl-speed:mb:5.2} Mb/s UP: {ul-speed:mb:5.2} Mb/s"}
+    - disk-io:
+        poll-interval: *poll-interval
+        content:
+          map:
+            conditions:
+              device == nvme0n1:
+                - string: {text: "DR: {read_speed:mib:2} MiB/s DW: {write_speed:mib:2} MiB/s"}
+  center:
+    - clock:
+        date-format: "%d/%m/%y"
+        time-format: "%H:%M:%S"
+        content:
+          - string: {text: "{date}", right-margin: 5}
+          - string: {text: "{time}"}
+  right:
+    - battery:
+        name: BAT0
+        poll-interval: *poll-interval
+        content:
+          map:
+            default:
+              - string: {text: "{capacity}% {estimate}"}
+            conditions:
+              state == full:
+                - string: {text: "{capacity}% full"}
