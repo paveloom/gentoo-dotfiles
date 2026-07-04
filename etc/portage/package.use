@@ -168,6 +168,8 @@ x11-base/xorg-server xvfb
 gui-wm/labwc icons
 gui-wm/sway tray
 
+x11-misc/j4-dmenu-desktop -dmenu
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
