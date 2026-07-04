@@ -165,6 +165,8 @@ net-libs/ngtcp2 gnutls
 # FlareSolverr
 x11-base/xorg-server xvfb
 
+gui-wm/labwc icons
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
