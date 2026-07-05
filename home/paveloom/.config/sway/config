@@ -31,7 +31,7 @@ input type:keyboard {
 # Basics
 
 bindsym $mod+Return exec $term
-bindsym --release Super_L exec $menu
+bindsym $mod+slash exec $menu
 
 # Enable moving and resizing via mouse
 floating_modifier $mod normal
