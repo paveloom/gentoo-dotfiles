@@ -44,10 +44,9 @@ bindsym $mod+Shift+k kill
 
 workspace_layout tabbed
 
-bindsym $mod+Up focus parent
-bindsym $mod+Down focus child
-
 bindsym $mod+Left focus left
+bindsym $mod+Down focus down
+bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 bindsym $mod+Shift+Left move left
@@ -71,8 +70,6 @@ bindsym $mod+t workspace number 5
 bindsym $mod+y workspace number 6
 bindsym $mod+u workspace number 7
 bindsym $mod+i workspace number 8
-bindsym $mod+o workspace number 9
-bindsym $mod+p workspace number 10
 
 bindsym $mod+Shift+q move container to workspace number 1
 bindsym $mod+Shift+w move container to workspace number 2
@@ -82,23 +79,23 @@ bindsym $mod+Shift+t move container to workspace number 5
 bindsym $mod+Shift+y move container to workspace number 6
 bindsym $mod+Shift+u move container to workspace number 7
 bindsym $mod+Shift+i move container to workspace number 8
-bindsym $mod+Shift+o move container to workspace number 9
-bindsym $mod+Shift+p move container to workspace number 10
 
 # Layout
 
-bindsym $mod+b splith
+bindsym $mod+h splith
 bindsym $mod+v splitv
-bindsym $mod+n splitv; layout tabbed
 
-bindsym $mod+s layout stacking
 bindsym $mod+a layout tabbed
+bindsym $mod+s layout stacking
 bindsym $mod+d layout toggle split
 
 bindsym $mod+f fullscreen
 
 bindsym $mod+space focus mode_toggle
 bindsym $mod+Shift+space floating toggle
+
+bindsym $mod+p focus parent
+bindsym $mod+o focus child
 
 # Scratchpad
 
