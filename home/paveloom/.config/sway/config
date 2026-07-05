@@ -46,8 +46,8 @@ workspace_layout tabbed
 bindsym $mod+Up focus parent
 bindsym $mod+Down focus child
 
-bindsym $mod+Left focus left sibling
-bindsym $mod+Right focus right sibling
+bindsym $mod+Left focus left
+bindsym $mod+Right focus right
 
 # That's a trick to move between children of the top-level container
 bindsym $mod+Ctrl+Left focus parent; focus parent; focus parent; focus parent; focus child; focus child; focus child; focus left
