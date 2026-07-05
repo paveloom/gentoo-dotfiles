@@ -145,9 +145,10 @@ bar {
     tray_output *
 
     colors {
-        statusline #ffffff
-        background #323232
-        inactive_workspace #32323200 #32323200 #5c5c5c
+        statusline #1a1a1a
+        background #fafafb
+        focused_workspace #888888 #e0e0e0 #1a1a1a
+        inactive_workspace #ffffff #ffffff #888888
     }
 }
 
@@ -155,3 +156,6 @@ bar {
 
 default_border none
 hide_edge_borders --i3 both
+
+client.focused          #888888 #e0e0e0 #1a1a1a
+client.unfocused        #888888 #fafafa #888888
