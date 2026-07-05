@@ -6,7 +6,7 @@ set $menu j4-dmenu-desktop --dmenu="wmenu -i"
 
 # Output configuration
 
-font monospace 12
+font pango:monospace Bold 12
 output * bg ~/Pictures/Wallpapers/flowers.png fill
 
 # Idle configuration
