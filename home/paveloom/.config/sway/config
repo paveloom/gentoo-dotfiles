@@ -153,4 +153,5 @@ bar {
 
 # Decorations
 
-hide_edge_borders both
+default_border none
+hide_edge_borders --i3 both
