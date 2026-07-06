@@ -1,3 +1,5 @@
+sys-apps/portage gentoo-dev
+
 sys-apps/systemd boot
 sys-kernel/installkernel dracut systemd-boot
 
