@@ -120,6 +120,7 @@ main() {
     symlink "etc/vim"
     symlink "home/paveloom" -f
     symlink "home/paveloom/.config" -d
+    symlink "home/paveloom/.ssh" -f
     symlink "root/.config" -d
     symlink "usr/share/i18n/locales" -f
 }
