@@ -56,9 +56,8 @@ sys-libs/libcap static-libs
 # nftables
 net-firewall/iptables nftables
 
-# required by net-news/newsflash-3.3.5::guru
-# required by newsflash (argument)
->=media-video/clapper-0.8.0 mpris
+# required by newsflash
+media-video/clapper mpris -gui
 
 x11-libs/libdrm video_cards_radeon
 
