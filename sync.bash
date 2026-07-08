@@ -111,6 +111,7 @@ main() {
     symlink "etc/fish"
     symlink "etc/nftables"
     symlink "etc/nginx/conf.d"
+    symlink "etc/pam.d" -f
     symlink "etc/portage"
     symlink "etc/ripgrep"
     symlink "etc/scx_loader"
