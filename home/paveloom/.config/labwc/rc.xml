@@ -12,7 +12,7 @@
     <default/>
     <!-- The W- prefix refers to the Super key -->
     <keybind key="Super_L" onRelease="true">
-      <action name="Execute" command="fuzzel"/>
+      <action name="Execute" command="xfce4-appfinder" />
     </keybind>
   </keyboard>
   <libinput>
