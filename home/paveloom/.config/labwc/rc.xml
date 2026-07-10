@@ -56,7 +56,7 @@
   </libinput>
   <windowRules>
     <windowRule identifier="foot" event="onMap">
-      <action name="Maximize" direction="both"/>
+      <action name="Maximize" direction="both" />
     </windowRule>
   </windowRules>
   <windowSwitcher outlines="no" unshade="no">
