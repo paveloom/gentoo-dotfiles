@@ -14,6 +14,10 @@
     <keybind key="W-L">
       <action name="Execute" command="swaylock" />
     </keybind>
+    <keybind key="W-V" onRelease="true">
+      <action name="Execute" command="xfce4-popup-clipman" />
+    </keybind>
+
     <keybind key="Super_L" onRelease="true">
       <action name="Execute" command="xfce4-appfinder" />
     </keybind>
