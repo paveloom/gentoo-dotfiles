@@ -7,4 +7,4 @@ if [[ -f ~/.bashrc ]] ; then
 fi
 
 # Start the compositor
-[ "$(tty)" = "/dev/tty1" ] && exec sway
+[ "$(tty)" = "/dev/tty1" ] && exec labwc
