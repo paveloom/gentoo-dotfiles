@@ -54,19 +54,6 @@
       <naturalScroll>yes</naturalScroll>
     </device>
   </libinput>
-  <theme>
-    <font place="ActiveWindow">
-      <name>monospace</name>
-      <size>12</size>
-      <weight>bold</weight>
-    </font>
-    <font place="InactiveWindow">
-      <name>monospace</name>
-      <size>12</size>
-    </font>
-    <name>Adwaita</name>
-    <icon>Adwaita</icon>
-  </theme>
   <windowRules>
     <windowRule identifier="foot" event="onMap">
       <action name="Maximize" direction="both"/>
