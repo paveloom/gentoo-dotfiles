@@ -59,4 +59,6 @@
       <action name="Maximize" direction="both"/>
     </windowRule>
   </windowRules>
+  <windowSwitcher outlines="no" unshade="no">
+  </windowSwitcher>
 </labwc_config>
