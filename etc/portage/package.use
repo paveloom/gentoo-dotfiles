@@ -171,6 +171,9 @@ gui-wm/sway tray
 
 x11-misc/j4-dmenu-desktop -dmenu
 
+# required by xfce-base/xfce4-panel[dbusmenu]
+dev-libs/libdbusmenu gtk3
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
