@@ -1,5 +1,5 @@
 swaybg -i ~/Pictures/Wallpapers/flowers.png &
-yambar &
+xfce4-panel &
 
 qbittorrent &
 nicotine &
