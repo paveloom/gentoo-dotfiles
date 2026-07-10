@@ -1,5 +1,10 @@
 swaybg -i ~/Pictures/Wallpapers/flowers.png &
 xfce4-panel &
 
+swayidle -w \
+    timeout 5 'if pgrep -x swaylock; then wlopm --off \*; fi' \
+        resume 'wlopm --on \*' \
+    lock 'swaylock -f' &
+
 qbittorrent &
 nicotine &
