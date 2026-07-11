@@ -120,7 +120,27 @@ main() {
     symlink "etc/systemd/system.conf.d/"
     symlink "etc/vim"
     symlink "home/paveloom" -f
-    symlink "home/paveloom/.config" -d
+    symlink "home/paveloom/.config/clangd"
+    symlink "home/paveloom/.config/codebook"
+    symlink "home/paveloom/.config/emacs"
+    symlink "home/paveloom/.config/fish"
+    symlink "home/paveloom/.config/fontconfig"
+    symlink "home/paveloom/.config/foot"
+    symlink "home/paveloom/.config/git"
+    symlink "home/paveloom/.config/halloy"
+    symlink "home/paveloom/.config/helix"
+    symlink "home/paveloom/.config/labwc"
+    symlink "home/paveloom/.config/lazygit"
+    symlink "home/paveloom/.config/lf"
+    symlink "home/paveloom/.config/mpv"
+    symlink "home/paveloom/.config/neomutt"
+    symlink "home/paveloom/.config/nvim"
+    symlink "home/paveloom/.config/sway"
+    symlink "home/paveloom/.config/swaylock"
+    symlink "home/paveloom/.config/systemd"
+    symlink "home/paveloom/.config/tmux"
+    symlink "home/paveloom/.config/yambar"
+    symlink "home/paveloom/.config/zed"
     symlink "home/paveloom/.gnupg" -f
     symlink "home/paveloom/.ssh" -f
     symlink "root/.config" -d
