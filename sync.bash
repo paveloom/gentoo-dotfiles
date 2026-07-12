@@ -122,6 +122,7 @@ main() {
     symlink "home/paveloom" -f
     symlink "home/paveloom/.config/clangd"
     symlink "home/paveloom/.config/codebook"
+    symlink "home/paveloom/.config/cosmic/com.system76.CosmicTerm/v1" -f
     symlink "home/paveloom/.config/emacs"
     symlink "home/paveloom/.config/fish"
     symlink "home/paveloom/.config/fontconfig"
