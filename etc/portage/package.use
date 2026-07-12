@@ -14,9 +14,6 @@ media-plugins/gst-plugins-meta ffmpeg modplug opus vaapi
 media-video/pipewire extra sound-server v4l
 media-sound/pulseaudio -daemon
 
-# KeePassXC
-app-admin/keepassxc browser
-
 # Vivaldi
 media-video/ffmpeg chromium
 media-video/ffmpeg-chromium vaapi
@@ -61,8 +58,10 @@ media-video/clapper mpris -gui
 
 x11-libs/libdrm video_cards_radeon
 
+app-admin/keepassxc browser keyring -ssh-agent
+app-crypt/pinentry keyring -gtk
 gnome-base/gnome-keyring -ssh-agent
-app-admin/keepassxc -keyring -ssh-agent
+cosmic-base/cosmic-meta -gnome-keyring
 
 net-p2p/qbittorrent webui
 
