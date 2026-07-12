@@ -5,6 +5,3 @@
 if [[ -f ~/.bashrc ]] ; then
 	. ~/.bashrc
 fi
-
-# Start the compositor
-[ "$(tty)" = "/dev/tty1" ] && exec labwc
