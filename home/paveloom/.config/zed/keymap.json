@@ -3,22 +3,22 @@
     "context": "Editor",
     "bindings": {
       "alt-/": "editor::ToggleInlineDiagnostics",
-      "alt-z": "editor::ToggleSoftWrap"
-    }
+      "alt-z": "editor::ToggleSoftWrap",
+    },
   },
   {
     "context": "Editor && (vim_mode == normal)",
     "bindings": {
       "space a": "pane::GoBack",
       "space d": "pane::GoForward",
-      "ctrl-shift-t": "terminal_panel::ToggleFocus"
-    }
+      "ctrl-shift-t": "terminal_panel::ToggleFocus",
+    },
   },
   {
     "context": "Editor && (vim_mode == insert)",
     "bindings": {
-      "ctrl-v": "editor::Paste"
-    }
+      "ctrl-v": "editor::Paste",
+    },
   },
   {
     "context": "Editor && (vim_mode == visual)",
@@ -27,54 +27,54 @@
       "ctrl-right": ["workspace::SendKeystrokes", "5 l"],
       "ctrl-up": ["workspace::SendKeystrokes", "5 g k"],
       "ctrl-down": ["workspace::SendKeystrokes", "5 g j"],
-      "x": ["workspace::SendKeystrokes", "\" + x"]
-    }
+      "x": ["workspace::SendKeystrokes", "\" + x"],
+    },
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == insert)",
     "bindings": {
       "ctrl-up": ["editor::MoveUpByLines", { "lines": 5 }],
-      "ctrl-down": ["editor::MoveDownByLines", { "lines": 5 }]
-    }
+      "ctrl-down": ["editor::MoveDownByLines", { "lines": 5 }],
+    },
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "tab": "editor::Indent",
-      "shift-tab": "editor::Outdent"
-    }
+      "shift-tab": "editor::Outdent",
+    },
   },
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual)",
     "bindings": {
       "left": "vim::WrappingLeft",
-      "right": "vim::WrappingRight"
-    }
+      "right": "vim::WrappingRight",
+    },
   },
   {
     "context": "Pane",
     "bindings": {
       "ctrl-shift-tab": "pane::ActivatePreviousItem",
-      "ctrl-tab": "pane::ActivateNextItem"
-    }
+      "ctrl-tab": "pane::ActivateNextItem",
+    },
   },
   {
     "context": "GitPanel",
     "bindings": {
-      "ctrl-shift-g": "workspace::ToggleLeftDock"
-    }
+      "ctrl-shift-g": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "OutlinePanel",
     "bindings": {
-      "ctrl-shift-b": "workspace::ToggleLeftDock"
-    }
+      "ctrl-shift-b": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "ProjectPanel",
     "bindings": {
-      "ctrl-shift-e": "workspace::ToggleLeftDock"
-    }
+      "ctrl-shift-e": "workspace::ToggleLeftDock",
+    },
   },
   {
     "context": "Terminal",
@@ -82,7 +82,7 @@
       "ctrl-n": null,
       "ctrl-p": null,
       "ctrl-s": null,
-      "ctrl-shift-t": "workspace::ToggleBottomDock"
-    }
-  }
+      "ctrl-shift-t": "workspace::ToggleBottomDock",
+    },
+  },
 ]
