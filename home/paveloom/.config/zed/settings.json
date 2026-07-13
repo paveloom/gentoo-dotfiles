@@ -16,10 +16,6 @@
       "enabled": false
     }
   },
-  "project_panel": {
-    "folder_icons": false,
-    "show_diagnostics": "all"
-  },
   "tabs": {
     "activate_on_close": "left_neighbour",
     "file_icons": true,
