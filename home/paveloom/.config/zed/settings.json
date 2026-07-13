@@ -22,6 +22,11 @@
     "git_status": true,
     "show_diagnostics": "all"
   },
+  "terminal": {
+    "shell": {
+      "program": "fish",
+    },
+  },
   "theme": "One Light",
   "title_bar": {
     "show_sign_in": false,
