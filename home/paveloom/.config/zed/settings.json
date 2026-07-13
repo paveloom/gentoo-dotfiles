@@ -7,6 +7,7 @@
   "collaboration_panel": {
     "button": false,
   },
+  "diff_view_style": "unified",
   "git": {
     "inline_blame": {
       "enabled": false
