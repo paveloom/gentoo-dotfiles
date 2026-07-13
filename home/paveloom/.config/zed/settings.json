@@ -35,9 +35,6 @@
   "toolbar": {
     "breadcrumbs": false,
   },
-  "search": {
-    "regex": true
-  },
   "show_edit_predictions": false,
   "show_whitespaces": "boundary",
   "ui_font_family": "Cantarell",
