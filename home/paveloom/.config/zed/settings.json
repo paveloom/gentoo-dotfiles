@@ -1,6 +1,12 @@
 {
+  "agent": {
+    "button": false,
+  },
   "buffer_font_family": "JetBrainsMonoNL Nerd Font",
   "buffer_font_size": 19,
+  "collaboration_panel": {
+    "button": false,
+  },
   "git": {
     "inline_blame": {
       "enabled": false
