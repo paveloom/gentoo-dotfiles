@@ -34,7 +34,6 @@
   },
   "toolbar": {
     "breadcrumbs": false,
-    "quick_actions": false
   },
   "search": {
     "regex": true
