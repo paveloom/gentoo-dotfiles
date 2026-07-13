@@ -52,13 +52,6 @@
     },
   },
   {
-    "context": "Pane",
-    "bindings": {
-      "ctrl-shift-tab": "pane::ActivatePreviousItem",
-      "ctrl-tab": "pane::ActivateNextItem",
-    },
-  },
-  {
     "context": "GitPanel",
     "bindings": {
       "ctrl-shift-g": "workspace::ToggleLeftDock",
@@ -68,6 +61,13 @@
     "context": "OutlinePanel",
     "bindings": {
       "ctrl-shift-b": "workspace::ToggleLeftDock",
+    },
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-shift-tab": "pane::ActivatePreviousItem",
+      "ctrl-tab": "pane::ActivateNextItem",
     },
   },
   {
