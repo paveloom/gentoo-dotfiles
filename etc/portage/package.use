@@ -178,6 +178,8 @@ dev-libs/libdbusmenu gtk3
 
 kde-apps/okular djvu epub markdown share
 
+net-news/rssguard webengine
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
