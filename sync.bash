@@ -106,6 +106,7 @@ main() {
     echo "The script will call \`sudo\` whenever root access is necessary."
     sudo -v || exit
 
+    symlink "etc" -f
     symlink "etc/bash"
     symlink "etc/env.d" -f
     symlink "etc/fish"
