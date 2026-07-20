@@ -40,6 +40,9 @@ games-emulation/RetroArch network pipewire
 # required by picard (argument)
 >=dev-python/pyqt5-5.15.11 declarative
 
+# Calibre
+dev-python/pyqt6 quick
+
 # Audacious
 media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 
