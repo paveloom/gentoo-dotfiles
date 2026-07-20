@@ -134,7 +134,6 @@ main() {
     symlink "home/paveloom/.config/lazygit"
     symlink "home/paveloom/.config/lf"
     symlink "home/paveloom/.config/mpv"
-    symlink "home/paveloom/.config/neomutt"
     symlink "home/paveloom/.config/nvim"
     symlink "home/paveloom/.config/sway"
     symlink "home/paveloom/.config/swaylock"
