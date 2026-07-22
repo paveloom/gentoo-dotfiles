@@ -1,0 +1,58 @@
+From 60c1bd0105246bbd309e5148f1399ac41c8ffd9f Mon Sep 17 00:00:00 2001
+From: AlexaFrom <26720623+AlexaFrom@users.noreply.github.com>
+Date: Wed, 8 Jul 2026 23:53:05 +0300
+Subject: [PATCH 1/2] socket.h: add forward declarations for kernel 7.x
+
+Signed-off-by: AlexaFrom <26720623+AlexaFrom@users.noreply.github.com>
+---
+ src/socket.h | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/src/socket.h b/src/socket.h
+index 82eb53ec..708481ee 100644
+--- a/src/socket.h
++++ b/src/socket.h
+@@ -11,6 +11,10 @@
+ #include <linux/if_vlan.h>
+ #include <linux/if_ether.h>
+ 
++struct wg_device;
++struct wg_peer;
++struct endpoint;
++
+ int wg_socket_init(struct wg_device *wg, u16 port);
+ void wg_socket_reinit(struct wg_device *wg, struct sock *new4,
+ 		      struct sock *new6);
+
+From 40b04a8d43f1e24ed6e495a5a97c05883ab1d122 Mon Sep 17 00:00:00 2001
+From: AlexaFrom <26720623+AlexaFrom@users.noreply.github.com>
+Date: Wed, 8 Jul 2026 23:54:12 +0300
+Subject: [PATCH 2/2] socket.c: replace ipv6_stub with ip6_dst_lookup_flow
+
+Signed-off-by: AlexaFrom <26720623+AlexaFrom@users.noreply.github.com>
+---
+ src/socket.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/socket.c b/src/socket.c
+index 39e836d1..58f32a7a 100644
+--- a/src/socket.c
++++ b/src/socket.c
+@@ -16,6 +16,7 @@
+ #include <linux/inetdevice.h>
+ #include <net/udp_tunnel.h>
+ #include <net/ipv6.h>
++#include <net/ip6_route.h>
+ 
+ static int send4(struct wg_device *wg, struct sk_buff *skb,
+ 		 struct endpoint *endpoint, u8 ds, struct dst_cache *cache)
+@@ -136,8 +137,7 @@ static int send6(struct wg_device *wg, struct sk_buff *skb,
+ 			if (cache)
+ 				dst_cache_reset(cache);
+ 		}
+-		dst = ipv6_stub->ipv6_dst_lookup_flow(sock_net(sock), sock, &fl,
+-						      NULL);
++		dst = ip6_dst_lookup_flow(sock_net(sock), sock, &fl, NULL);
+ 		if (IS_ERR(dst)) {
+ 			ret = PTR_ERR(dst);
+ 			net_dbg_ratelimited("%s: No route to %pISpfsc, error %d\n",
