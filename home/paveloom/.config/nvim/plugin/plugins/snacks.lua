@@ -75,6 +75,10 @@ map("n", "<leader>H", function()
   require("snacks").picker.highlights()
 end)
 
+map("n", "<leader>o", function()
+  require("snacks").picker.recent()
+end)
+
 map("n", "<leader>'", function()
   require("snacks").picker.resume()
 end)
