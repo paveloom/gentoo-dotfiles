@@ -10,7 +10,20 @@ escape_char /
 % ```
 
 LC_IDENTIFICATION
-title      "American English locale for Russia"
+title        "American English locale for Russia"
+audience     ""
+application  ""
+abbreviation ""
+source       ""
+address      ""
+contact      ""
+email        ""
+tel          ""
+fax          ""
+language     "American Russian"
+territory    "Russia"
+revision     "1.0"
+date         "2026-07-25"
 
 category "i18n:2012";LC_IDENTIFICATION
 category "i18n:2012";LC_CTYPE
@@ -112,7 +125,12 @@ copy "ru_RU"
 END LC_PAPER
 
 LC_NAME
-copy "en_US"
+name_fmt    "%d%t%g%t%m%t%f"
+name_gen    ""
+name_miss   ""
+name_mr     ""
+name_mrs    ""
+name_ms     ""
 END LC_NAME
 
 LC_ADDRESS
