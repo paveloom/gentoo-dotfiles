@@ -145,6 +145,7 @@ main() {
     symlink "home/paveloom/.gnupg" -f
     symlink "home/paveloom/.ssh" -f
     symlink "root/.config" -d
+    symlink "usr/share/i18n" -f
     symlink "usr/share/i18n/locales" -f
 }
 
