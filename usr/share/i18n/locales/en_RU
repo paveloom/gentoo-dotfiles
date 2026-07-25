@@ -1,9 +1,12 @@
 comment_char %
 escape_char /
 
-% Locale for American English locale in Russia
+% American English locale for Russia
 %
-% Install by running the following command:
+% The locale is specified in `/etc/locale.gen` and `/usr/share/i18n/SUPPORTED`,
+% so it's automatically compiled into a glibc locale archive via `locale-gen`.
+%
+% Alternatively, it can be compiled manually via
 %
 % ```bash
 % localedef -i en_RU -f UTF-8 en_RU.UTF-8
@@ -20,7 +23,7 @@ contact      ""
 email        ""
 tel          ""
 fax          ""
-language     "American Russian"
+language     "American English"
 territory    "Russia"
 revision     "1.0"
 date         "2026-07-25"
