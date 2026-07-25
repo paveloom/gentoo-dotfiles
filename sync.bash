@@ -121,6 +121,7 @@ main() {
     symlink "etc/systemd/system.conf.d/"
     symlink "etc/vim"
     symlink "home/paveloom" -f
+    symlink "home/paveloom/.config" -f
     symlink "home/paveloom/.config/clangd"
     symlink "home/paveloom/.config/codebook"
     symlink "home/paveloom/.config/cosmic/com.system76.CosmicTerm/v1" -f
