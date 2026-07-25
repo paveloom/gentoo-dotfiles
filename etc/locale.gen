@@ -1,0 +1,7 @@
+# This file defines which locales to incorporate into the glibc locale archive.
+# See the locale.gen(5) and locale-gen(8) man pages for more details.
+
+en_GB # British English (United Kingdom)
+en_RU # Russian English (custom locale)
+en_US # American English (United States)
+ru_RU # Russian (Russia)
