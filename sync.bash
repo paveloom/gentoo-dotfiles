@@ -148,6 +148,7 @@ main() {
     symlink "root/.config" -d
     symlink "usr/share/i18n" -f
     symlink "usr/share/i18n/locales" -f
+    symlink "var/lib/plasmalogin/.config" -f
 }
 
 main
