@@ -3,8 +3,6 @@
 if vim.g.colors_name ~= nil then vim.cmd.highlight("clear") end
 vim.g.colors_name = "custom"
 
-vim.cmd.source("/usr/share/nvim/runtime/colors/retrobox.vim")
-
 local function hi(name, val)
   vim.api.nvim_set_hl(0, name, val)
 end
