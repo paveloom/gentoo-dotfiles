@@ -26,5 +26,4 @@ hi("GitSignsAdd", { fg = "DarkGreen" })
 hi("GitSignsChange", { fg = "DarkYellow" })
 hi("GitSignsDelete", { fg = "DarkRed" })
 
-hi("Function", { bold = true, update = true })
 hi("PreProc", { bold = true, update = true })
