@@ -16,6 +16,9 @@ if test $gnupg_SSH_AUTH_SOCK_by -ne %self
     set -x SSH_AUTH_SOCK "$(gpgconf --list-dirs agent-ssh-socket)"
 end
 
+# Add local binaries to the `PATH`
+fish_add_path $HOME/.local/bin
+
 # Add compiled Go packages to the `PATH`
 fish_add_path $HOME/go/bin
 
