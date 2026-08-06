@@ -1,0 +1,81 @@
+device_rules:
+  - conditions: $touchpad
+    swipe:
+      angle_tolerance: 20
+touchpad:
+  gestures:
+    - type: swipe
+      direction: any
+      conditions:
+        - $fingers >= 3
+
+    - type: swipe
+      fingers: 3
+      direction: up_down
+      actions:
+        - plasma_shortcut: kwin,Show Desktop
+
+    - type: swipe
+      fingers: 3
+      angle: 290-70
+      speed: fast
+      actions:
+        - on: begin
+          input:
+            - keyboard: [ leftalt+tab ]
+    - type: swipe
+      fingers: 3
+      angle: 290-70
+      bidirectional: true
+      speed: slow
+      actions:
+        - on: begin
+          input:
+            - keyboard: [ +leftalt, tab ]
+        - on: update
+          interval: -75
+          input:
+            - keyboard: [ leftshift+tab ]
+        - on: update
+          interval: 75
+          input:
+            - keyboard: [ tab ]
+        - on: end_cancel
+          input:
+            - keyboard: [ -leftalt ]
+
+    - type: tap
+      fingers: 4
+      actions:
+        - input:
+            - keyboard: [ playpause ]
+
+    - type: swipe
+      direction: left
+      fingers: 4
+      actions:
+        - input:
+            - keyboard: [ previoussong ]
+    - type: swipe
+      direction: right
+      fingers: 4
+      actions:
+        - input:
+            - keyboard: [ nextsong ]
+
+    - type: swipe
+      angle: 20-160
+      fingers: 4
+      actions:
+        - on: update
+          interval: 5
+          input:
+            - keyboard: [ volumeup ]
+    - type: swipe
+      angle: 200-340
+      fingers: 4
+      actions:
+        - on: update
+          interval: 5
+          input:
+            - keyboard: [ volumedown ]

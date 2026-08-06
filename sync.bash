@@ -132,6 +132,7 @@ main() {
     symlink "home/paveloom/.config/git"
     symlink "home/paveloom/.config/halloy"
     symlink "home/paveloom/.config/helix"
+    symlink "home/paveloom/.config/inputactions"
     symlink "home/paveloom/.config/labwc"
     symlink "home/paveloom/.config/lazygit"
     symlink "home/paveloom/.config/lf"
