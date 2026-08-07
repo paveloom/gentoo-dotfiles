@@ -13,7 +13,7 @@ touchpad:
       fingers: 3
       direction: up_down
       actions:
-        - plasma_shortcut: kwin,Show Desktop
+        - plasma_shortcut: kwin,MinimizeAll
 
     - type: swipe
       fingers: 3
