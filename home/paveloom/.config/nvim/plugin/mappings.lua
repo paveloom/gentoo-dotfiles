@@ -53,6 +53,9 @@ map("x", "p", "P")
 -- Open a vertical split instead of a horizontal one with `<C-w><C-]>`
 map("n", "<C-w><C-]>", "<cmd>vert wincmd ]<cr>")
 
+-- Unbind <C-LeftMouse> which does the same as `<C-]` by default
+map("n", "<C-LeftMouse>", "<nop>")
+
 -- Switch between modes of viewing diagnostics with <A-v>
 map("n", "<A-v>", function()
   local config = vim.diagnostic.config() or {}
