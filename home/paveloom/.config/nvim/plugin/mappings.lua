@@ -50,6 +50,9 @@ map({ "n", "x" }, "s", "\"_s")
 -- Don't copy the replaced text when pasting in the Visual mode
 map("x", "p", "P")
 
+-- Open a vertical split instead of a horizontal one with `<C-w><C-]>`
+map("n", "<C-w><C-]>", "<cmd>vert wincmd ]<cr>")
+
 -- Switch between modes of viewing diagnostics with <A-v>
 map("n", "<A-v>", function()
   local config = vim.diagnostic.config() or {}
