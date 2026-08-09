@@ -44,7 +44,13 @@ require("snacks").setup({
         keys = {
           ["<Esc>"]      = { "close", mode = { "n", "i" } },
           ["<PageDown>"] = { "preview_scroll_down", mode = { "n", "i" } },
-          ["<PageUp>"]   = { "preview_scroll_up", mode = { "n", "i" } }
+          ["<PageUp>"]   = { "preview_scroll_up", mode = { "n", "i" } },
+          ["<Tab>"]      = { "focus_preview", mode = { "n", "i" } }
+        }
+      },
+      preview = {
+        keys = {
+          ["<Tab>"] = { "focus_input", mode = { "n" } }
         }
       }
     }
