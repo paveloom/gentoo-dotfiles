@@ -7,6 +7,7 @@ vim.lsp.enable({
   "gopls",
   "lua_ls",
   "neocmake",
+  "pylsp",
   "rust_analyzer",
   "ts_ls",
   "yamlls"
