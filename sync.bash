@@ -108,6 +108,7 @@ main() {
 
     symlink "etc" -f
     symlink "etc/bash"
+    symlink "etc/eixrc"
     symlink "etc/env.d" -f
     symlink "etc/fish"
     symlink "etc/nftables"
