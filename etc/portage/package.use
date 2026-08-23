@@ -185,6 +185,8 @@ dev-libs/boost zstd
 
 media-libs/chromaprint tools
 
+net-analyzer/wireshark http2 http3
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
