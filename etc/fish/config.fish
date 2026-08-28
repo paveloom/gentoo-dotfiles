@@ -11,3 +11,9 @@ set -x EDITOR /bin/nvim
 
 # Set the path to the `ripgrep` config
 set -x RIPGREP_CONFIG_PATH /etc/ripgrep/config
+
+# Enable the `fzf` integration
+fzf --fish | source
+
+# Bind `Ctrl+Backspace` to delete a word behind the cursor
+bind \b backward-kill-word
