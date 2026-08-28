@@ -16,4 +16,4 @@ set -x RIPGREP_CONFIG_PATH /etc/ripgrep/config
 fzf --fish | source
 
 # Bind `Ctrl+Backspace` to delete a word behind the cursor
-bind \b backward-kill-word
+bind ctrl-backspace backward-kill-word
