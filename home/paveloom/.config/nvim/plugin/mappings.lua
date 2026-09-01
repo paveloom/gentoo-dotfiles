@@ -53,6 +53,9 @@ map("x", "p", "P")
 -- Open a vertical split instead of a horizontal one with `<C-w><C-]>`
 map("n", "<C-w><C-]>", "<cmd>vert wincmd ]<cr>")
 
+-- Break the undo block after every space
+map("i", "<space>", "<C-g>u<space>")
+
 -- Unbind <C-LeftMouse> which does the same as `<C-]` by default
 map("n", "<C-LeftMouse>", "<nop>")
 
