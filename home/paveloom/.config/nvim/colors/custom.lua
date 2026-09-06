@@ -16,6 +16,8 @@ hi("NonText", { link = "Normal" })
 hi("SignColumn", { link = "Normal" })
 hi("StatusLine", { link = "Visual" })
 hi("Visual", { link = "CursorLine" })
+hi("WinBar", { link = "StatusLine" })
+hi("WinBarNC", { link = "StatusLineNC" })
 
 hi("Pmenu", { link = "Normal" })
 hi("PmenuKind", { bg = "none" })

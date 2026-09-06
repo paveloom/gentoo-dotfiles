@@ -20,6 +20,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 
     local map = require("config.mappings").map_buf(args.buf)
 
+    if client:supports_method("textDocument/documentSymbol") then
+      require("nvim-navic").attach(client, args.buf)
+      vim.opt_local.winbar = "%{%v:lua.require'nvim-navic'.get_location()%}"
+    end
+
     if client:supports_method("textDocument/inlayHint") then
       map("n", "<A-c>", function()
         vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled())
