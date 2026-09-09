@@ -33,6 +33,13 @@ require("snacks").setup({
           sort_empty = true
         }
       },
+      git_diff = {
+        previewers = {
+          diff = {
+            style = "syntax"
+          }
+        }
+      },
       lsp_symbols = {
         sort = {
           fields = { "idx" }
@@ -71,6 +78,10 @@ end)
 
 map("n", "<leader>f", function()
   require("snacks").picker.files()
+end)
+
+map("n", "<leader>g", function()
+  require("snacks").picker.git_diff()
 end)
 
 map("n", "<leader>h", function()
