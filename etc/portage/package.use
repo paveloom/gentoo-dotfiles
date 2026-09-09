@@ -190,6 +190,8 @@ net-analyzer/wireshark http2 http3
 # required by net-news/rssguard
 dev-qt/qtmultimedia gstreamer
 
+dev-qt/qttools designer
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
