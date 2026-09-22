@@ -50,7 +50,7 @@ media-plugins/audacious-plugins opus pipewire sndfile -pulseaudio
 dev-libs/raft lz4
 dev-util/xdelta lzma
 net-firewall/nftables json
-sys-fs/squashfs-tools lzma
+sys-fs/squashfs-tools lzma zstd
 sys-libs/libcap static-libs
 
 # nftables
