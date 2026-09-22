@@ -25,8 +25,8 @@ media-libs/mesa vaapi
 # FFMPEG
 media-video/ffmpeg fdk opus svt-av1 vaapi vpx
 
-# Evolution
 mail-client/evolution archive -weather
+gnome-extra/evolution-data-server -gtk -oauth-gtk3
 
 # Fonts
 media-fonts/corefonts tahoma
