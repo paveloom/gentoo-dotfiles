@@ -1,0 +1,147 @@
+From 4c32563a22b920abae0c970e585c92a769f5378f Mon Sep 17 00:00:00 2001
+From: K900 <me@0upti.me>
+Date: Sun, 26 Jul 2026 21:39:56 +0300
+Subject: [PATCH 1/3] socket, compat: fix build with kernel 7.1.5+
+
+---
+ src/compat/compat.h | 6 ++++++
+ src/socket.c        | 8 ++++----
+ 2 files changed, 10 insertions(+), 4 deletions(-)
+
+diff --git a/src/compat/compat.h b/src/compat/compat.h
+index 3be11133..abc28625 100644
+--- a/src/compat/compat.h
++++ b/src/compat/compat.h
+@@ -1444,4 +1444,10 @@ static inline void __compat_chacha20_crypt(struct chacha_state *state,
+ 
+ #endif
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(7, 1, 5)
++#include <net/udp_tunnel.h>
++#define setup_udp_tunnel_sock(net, sk, sock_cfg) setup_udp_tunnel_sock(net, sk->sk_socket, sock_cfg)
++#define udp_tunnel_sock_release(sk) udp_tunnel_sock_release(sk->sk_socket)
++#endif
++
+ #endif /* _WG_COMPAT_H */
+diff --git a/src/socket.c b/src/socket.c
+index 24bf1ab0..a84bdb2e 100644
+--- a/src/socket.c
++++ b/src/socket.c
+@@ -375,7 +375,7 @@ static void sock_free(struct sock *sock)
+ 	if (unlikely(!sock))
+ 		return;
+ 	sk_clear_memalloc(sock);
+-	udp_tunnel_sock_release(sock->sk_socket);
++	udp_tunnel_sock_release(sock);
+ }
+ 
+ static void set_sock_opts(struct socket *sock)
+@@ -429,14 +429,14 @@ int wg_socket_init(struct wg_device *wg, u16 port)
+ 		goto out;
+ 	}
+ 	set_sock_opts(new4);
+-	setup_udp_tunnel_sock(net, new4, &cfg);
++	setup_udp_tunnel_sock(net, new4->sk, &cfg);
+ 
+ #if IS_ENABLED(CONFIG_IPV6)
+ 	if (ipv6_mod_enabled()) {
+ 		port6.local_udp_port = inet_sk(new4->sk)->inet_sport;
+ 		ret = udp_sock_create(net, &port6, &new6);
+ 		if (ret < 0) {
+-			udp_tunnel_sock_release(new4);
++			udp_tunnel_sock_release(new4->sk);
+ 			if (ret == -EADDRINUSE && !port && retries++ < 100)
+ 				goto retry;
+ 			pr_err("%s: Could not create IPv6 socket\n",
+@@ -444,7 +444,7 @@ int wg_socket_init(struct wg_device *wg, u16 port)
+ 			goto out;
+ 		}
+ 		set_sock_opts(new6);
+-		setup_udp_tunnel_sock(net, new6, &cfg);
++		setup_udp_tunnel_sock(net, new6->sk, &cfg);
+ 	}
+ #endif
+ 
+
+From c020a33ffd074b3fd6ac5ecbed3a2d8b9fbf0ee8 Mon Sep 17 00:00:00 2001
+From: K900 <me@0upti.me>
+Date: Wed, 29 Jul 2026 13:43:17 +0300
+Subject: [PATCH 2/3] netlink: use strscpy instead of strncpy
+
+strncpy is removed in 7.2
+---
+ src/netlink.c | 8 ++++----
+ 1 file changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/netlink.c b/src/netlink.c
+index b1da877c..28f1efa5 100644
+--- a/src/netlink.c
++++ b/src/netlink.c
+@@ -172,8 +172,8 @@ static inline int parse_ipv4_prefix(const char *prefix_str, struct ipv4_prefix *
+ 	if (slash - prefix_str >= INET_ADDRSTRLEN)
+ 		return -EINVAL;
+ 
+-	strncpy(addr_str, prefix_str, slash - prefix_str);
+-	addr_str[slash - prefix_str] = '\0';
++	// strscpy count includes null terminator
++	strscpy(addr_str, prefix_str, slash - prefix_str + 1);
+ 
+ 	ret = kstrtoint(slash + 1, 10, &prefix->prefix_len);
+ 	if (ret < 0)
+@@ -231,8 +231,8 @@ static inline int parse_ipv6_prefix(const char *prefix_str, struct ipv6_prefix *
+ 	if (slash - prefix_str >= INET6_ADDRSTRLEN)
+ 		return -EINVAL;
+ 
+-	strncpy(addr_str, prefix_str, slash - prefix_str);
+-	addr_str[slash - prefix_str] = '\0';
++	// strscpy count includes null terminator
++	strscpy(addr_str, prefix_str, slash - prefix_str + 1);
+ 
+ 	ret = kstrtoint(slash + 1, 10, &prefix->prefix_len);
+ 	if (ret < 0)
+
+From bd7c770756697b46e617d8f4a6065a3668fd8b89 Mon Sep 17 00:00:00 2001
+From: K900 <me@0upti.me>
+Date: Thu, 20 Aug 2026 11:38:24 +0300
+Subject: [PATCH 3/3] device: pass WQ_PERCPU to avoid splat on kernel 7.2
+
+---
+ src/compat/compat.h | 4 ++++
+ src/device.c        | 4 ++--
+ 2 files changed, 6 insertions(+), 2 deletions(-)
+
+diff --git a/src/compat/compat.h b/src/compat/compat.h
+index abc28625..3b8606d7 100644
+--- a/src/compat/compat.h
++++ b/src/compat/compat.h
+@@ -1450,4 +1450,8 @@ static inline void __compat_chacha20_crypt(struct chacha_state *state,
+ #define udp_tunnel_sock_release(sk) udp_tunnel_sock_release(sk->sk_socket)
+ #endif
+ 
++#if LINUX_VERSION_CODE < KERNEL_VERSION(6, 18, 0)
++#define WQ_PERCPU 0
++#endif
++
+ #endif /* _WG_COMPAT_H */
+diff --git a/src/device.c b/src/device.c
+index c8f43121..011e718a 100644
+--- a/src/device.c
++++ b/src/device.c
+@@ -379,7 +379,7 @@ static int wg_newlink(struct net_device *dev,
+ #endif
+ 
+ 	wg->handshake_receive_wq = alloc_workqueue("wg-kex-%s",
+-			WQ_CPU_INTENSIVE | WQ_FREEZABLE, 0, dev->name);
++			WQ_CPU_INTENSIVE | WQ_FREEZABLE | WQ_PERCPU, 0, dev->name);
+ 	if (!wg->handshake_receive_wq)
+ 		goto err_free_tstats;
+ 
+@@ -389,7 +389,7 @@ static int wg_newlink(struct net_device *dev,
+ 		goto err_destroy_handshake_receive;
+ 
+ 	wg->packet_crypt_wq = alloc_workqueue("wg-crypt-%s",
+-			WQ_CPU_INTENSIVE | WQ_MEM_RECLAIM, 0, dev->name);
++			WQ_CPU_INTENSIVE | WQ_MEM_RECLAIM | WQ_PERCPU, 0, dev->name);
+ 	if (!wg->packet_crypt_wq)
+ 		goto err_destroy_handshake_send;
+ 
