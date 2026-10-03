@@ -117,6 +117,7 @@ main() {
     symlink "etc/ripgrep"
     symlink "etc/scx_loader"
     symlink "etc/speech-dispatcher"
+    symlink "etc/systemd/coredump.conf.d/"
     symlink "etc/systemd/system" -d -f
     symlink "etc/systemd/system.conf.d/"
     symlink "etc/vim"
