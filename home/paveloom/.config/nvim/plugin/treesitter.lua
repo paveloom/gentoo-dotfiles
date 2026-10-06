@@ -1,4 +1,8 @@
--- Look up queries in the system last
+-- Run `:checkhealth vim.treesitter` to check Tree-sitter health
+
+-- Parsers are picked up from the `~/.config/nvim/parser` directory
+
+-- Look up queries bundled with Neovim first, system queries last
 vim.opt.runtimepath:append("/usr/share/tree-sitter")
 
 --- @param lang string Name of parser
