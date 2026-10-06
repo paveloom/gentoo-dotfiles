@@ -18,7 +18,8 @@ local filetypes = {
   bash = { "bash" },
   cmake = { "cmake" },
   cpp = { "cpp" },
-  json = { "json" }
+  json = { "json" },
+  zig = { "zig" }
 }
 
 for lang, filetype in pairs(filetypes) do
