@@ -10,7 +10,8 @@ vim.lsp.enable({
   "pylsp",
   "rust_analyzer",
   "ts_ls",
-  "yamlls"
+  "yamlls",
+  "zls"
 })
 
 vim.api.nvim_create_autocmd("LspAttach", {
