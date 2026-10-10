@@ -1,0 +1,27 @@
+[Desktop Entry]
+Name=Falkon
+Type=Application
+Icon=falkon
+Categories=Network;WebBrowser;
+Comment=A fast and secure web browser
+GenericName=Web Browser
+Exec=/home/paveloom/.local/share/applications/org.kde.falkon.bash %u
+StartupWMClass=Falkon
+MimeType=text/html;application/xhtml+xml;x-scheme-handler/http;x-scheme-handler/https;application/x-mimearchive;
+Terminal=false
+Actions=NewTab;NewWindow;PrivateBrowsing;
+
+[Desktop Action NewTab]
+Name=Open new tab
+Icon=tab-new
+Exec=/home/paveloom/.local/share/applications/org.kde.falkon.bash --new-tab
+
+[Desktop Action NewWindow]
+Name=Open new window
+Icon=window-new
+Exec=/home/paveloom/.local/share/applications/org.kde.falkon.bash --new-window
+
+[Desktop Action PrivateBrowsing]
+Name=Start private browsing
+Icon=view-private
+Exec=/home/paveloom/.local/share/applications/org.kde.falkon.bash --private-browsing
