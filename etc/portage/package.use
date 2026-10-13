@@ -192,6 +192,8 @@ dev-qt/qtmultimedia gstreamer
 
 dev-qt/qttools designer
 
+dev-qt/qtwebengine vaapi
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
