@@ -194,6 +194,8 @@ dev-qt/qttools designer
 
 dev-qt/qtwebengine vaapi
 
+kde-plasma/plasma-meta -firewall
+
 # Steam
 app-arch/bzip2 abi_x86_32
 app-arch/lz4 abi_x86_32
