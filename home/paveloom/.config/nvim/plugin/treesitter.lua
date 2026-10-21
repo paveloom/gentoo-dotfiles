@@ -22,7 +22,9 @@ local filetypes = {
   bash = { "bash" },
   cmake = { "cmake" },
   cpp = { "cpp" },
+  javascript = { "javascript" },
   json = { "json" },
+  typescript = { "typescript" },
   zig = { "zig" }
 }
 
