@@ -1,0 +1,13 @@
+From: Pavel Sobolev <contact@paveloom.dev>
+Subject: [PATCH] fix: explicitly inherit highlights from JavaScript
+
+Signed-off-by: Pavel Sobolev <contact@paveloom.dev>
+
+--- a/queries/highlights.scm
++++ b/queries/highlights.scm
+@@ -1,3 +1,5 @@
++; inherits: javascript
++
+ ; Types
+ 
+ (type_identifier) @type
