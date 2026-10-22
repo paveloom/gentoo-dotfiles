@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+
+limit() {
+    export STEVE_JOBS
+    export STEVE_LOAD_AVERAGE
+
+    STEVE_JOBS="$(stevie -j)"
+    STEVE_LOAD_AVERAGE="$(stevie -l)"
+
+    stevie -J 10
+    stevie -L 11
+}
+
+reset() {
+    stevie -J "${STEVE_JOBS}"
+    stevie -L "${STEVE_LOAD_AVERAGE}"
+}
+
+pre_src_compile() {
+    limit
+}
+
+post_src_compile() {
+    reset
+}
+
+register_die_hook die_hook
+die_hook() {
+    reset
+}
