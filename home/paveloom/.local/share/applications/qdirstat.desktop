@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=QDirStat
+Type=Application
+Icon=qdirstat
+Categories=Qt;System;Filesystem;
+Comment=QDirStat Directory Statistics
+GenericName=QDirStat Directory Statistics
+Exec=kdesu qdirstat %f
+MimeType=inode/directory;inode/mount-point;
+Terminal=false
