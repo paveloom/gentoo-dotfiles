@@ -111,6 +111,7 @@ main() {
     symlink "etc/env.d" -f
     symlink "etc/fish"
     symlink "etc/nftables"
+    symlink "etc/nginx" -f
     symlink "etc/nginx/conf.d"
     symlink "etc/pam.d" -f
     symlink "etc/portage"
