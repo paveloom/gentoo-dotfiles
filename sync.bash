@@ -114,10 +114,10 @@ main() {
     symlink "etc/ripgrep"
     symlink "etc/scx_loader"
     symlink "etc/speech-dispatcher"
-    symlink "etc/systemd/coredump.conf.d/"
-    symlink "etc/systemd/journald.conf.d/"
+    symlink "etc/systemd/coredump.conf.d"
+    symlink "etc/systemd/journald.conf.d"
     symlink "etc/systemd/system" -d -f
-    symlink "etc/systemd/system.conf.d/"
+    symlink "etc/systemd/system.conf.d"
     symlink "etc/vim"
     symlink "home/paveloom" -f
     symlink "home/paveloom/.config" -f
