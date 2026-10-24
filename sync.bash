@@ -12,7 +12,7 @@ ROOT="$(realpath -e "$0" | xargs dirname)"
 # Using either of these options disables the default
 # behaviour of symlinking the passed file itself.
 symlink() {
-    local input_file="$1"
+    local repo_file="$1"
 
     local option_symlink_directories=false
     local option_symlink_regular_files=false
@@ -44,43 +44,39 @@ symlink() {
         return
     fi
 
-    if [[ ${input_file:0:1} != / ]]; then
-        input_file="$ROOT/$input_file"
-    fi
+    local target_file="$ROOT/$repo_file"
+    local symlink_file="$PREFIX$repo_file"
 
-    local output_file
-    output_file="$PREFIX$(realpath -s --relative-to "$ROOT" "$input_file")"
+    if sudo test -e "$symlink_file"; then
+        if sudo test -L "$symlink_file"; then
+            local current_target_file
+            current_target_file="$(sudo readlink "$symlink_file")"
 
-    if sudo test -e "$output_file"; then
-        if sudo test -L "$output_file"; then
-            local target
-            target="$(sudo readlink "$output_file")"
-
-            if [[ "$target" == "$input_file" ]]; then
+            if [[ "$current_target_file" == "$target_file" ]]; then
                 return
             fi
 
             local file_type
-            file_type="$(file -bL "$target")"
+            file_type="$(file -bL "$current_target_file")"
 
-            echo "file $output_file is a symbolic link to $target ($file_type)"
+            echo "file $symlink_file is a symbolic link to $current_target_file ($file_type)"
             read -r -p "Override? (y/n): " confirm </dev/tty
             if [[ "$confirm" != "y" ]]; then
                 return
             fi
         else
-            echo "file $output_file already exists; skipping"
+            echo "file $symlink_file already exists; skipping"
             return
         fi
     fi
 
-    if [[ ! -w "$(dirname "$output_file")" ]]; then
-        sudo ln -fs -T "$input_file" "$output_file"
+    if [[ ! -w "$(dirname "$symlink_file")" ]]; then
+        sudo ln -fs -T "$target_file" "$symlink_file"
     else
-        ln -fs -T "$input_file" "$output_file"
+        ln -fs -T "$target_file" "$symlink_file"
     fi
 
-    echo "$output_file -> $input_file"
+    echo "$symlink_file -> $target_file"
 }
 
 symlink_by_type() {
