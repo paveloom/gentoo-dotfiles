@@ -1,0 +1,22 @@
+[signing]
+behavior = "own"
+backend = "gpg"
+
+[templates]
+draft_commit_description = '''
+concat(
+  builtin_draft_commit_description,
+  "\nJJ: ignore-rest\n",
+  diff.git(),
+)
+'''
+
+[template-aliases]
+'format_short_change_id(id)' = 'id.shortest()'
+
+[ui]
+default-command = "log"
+
+[user]
+name = "Pavel Sobolev"
+email = "contact@paveloom.dev"
