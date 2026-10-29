@@ -196,6 +196,8 @@ dev-qt/qtwebengine vaapi
 
 kde-plasma/plasma-meta -firewall
 
+# required by games-emulation/dolphin
+net-libs/mbedtls threads
 # Steam
 app-arch/bzip2             abi_x86_32
 app-arch/xz-utils          abi_x86_32
