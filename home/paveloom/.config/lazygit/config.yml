@@ -10,7 +10,7 @@ gui:
       - "#e0e0e0"
   showBottomLine: false
   showCommandLog: false
-  useHunkModeInStagingView: false
+  useHunkModeInDiffView: false
 git:
   autoFetch: false
   autoForwardBranches: none
